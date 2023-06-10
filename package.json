@@ -10,6 +10,7 @@
     "lint": "eslint --ext .ts,.js,.vue ."
   },
   "devDependencies": {
+    "@invictus.codes/nuxt-vuetify": "^0.2.20",
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18",
