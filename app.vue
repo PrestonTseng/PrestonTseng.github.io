@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <NuxtWelcome />
-        {{ $t('hello') }}
-    </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
