@@ -1,11 +1,30 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-</script>
-
 <template>
-    <v-container>
-        <v-row align="center" justify="center"> </v-row>
-    </v-container>
+  <v-container style="max-width: 1440px">
+    <v-row align="start" justify="center">
+      <v-col cols="12">
+        <about-introduction></about-introduction>
+      </v-col>
+      <v-col cols="12" lg="9">
+        <about-skills></about-skills>
+      </v-col>
+      <v-col cols="12" lg="3">
+        <about-certifications></about-certifications>
+      </v-col>
+      <v-col cols="6">
+        <about-experiences></about-experiences>
+      </v-col>
+      <v-col cols="6">
+        <about-education></about-education>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+
+<script setup lang="ts">
+import { useDisplay } from 'vuetify'
+
+const { t } = useI18n()
+const { smAndUp, mdAndUp, lgAndUp, xlAndUp } = useDisplay()
+</script>
 
 <style scoped></style>
