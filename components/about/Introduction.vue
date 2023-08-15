@@ -40,10 +40,10 @@ const { t, locale } = useI18n({
         'I have 4 years of experience as a front-end engineer and transitioned to a full-stack role a year ago. My expertise lies in utilizing Vue and Nuxt for front-end development, along with ASP.NET Core for back-end development. Within the AEC industry, I have successfully tackled various challenges, such as optimizing high device-requirement BIM models for web operation, developing suitable SaaS solutions for construction companies, and leveraging computer vision technologies to enhance safety and convenience on construction sites. \n\nI am currently working on a project that utilizes LangChain, GPT, and vector search technologies, expanding the possibilities in the AEC industry.'
     },
     'zh-TW': {
-      prologue: "I'm Preston",
-      shortIntro: "I'm a Full Stack Engineer working at Taipei, Taiwan.",
+      prologue: "我是曾柏硯",
+      shortIntro: "我是一名在台灣台北工作的全端工程師。",
       longIntro:
-        'I have 4 years of experience as a front-end engineer and transitioned to a full-stack role a year ago. My expertise lies in utilizing Vue and Nuxt for front-end development, along with ASP.NET Core for back-end development. Within the AEC industry, I have successfully tackled various challenges, such as optimizing high device-requirement BIM models for web operation, developing suitable SaaS solutions for construction companies, and leveraging computer vision technologies to enhance safety and convenience on construction sites. \n\nI am currently working on a project that utilizes LangChain, GPT, and vector search technologies, expanding the possibilities in the AEC industry.'
+        '我擁有4年的前端工程師經驗，並於一年前轉向全端角色。我的專業領域在於使用Vue和Nuxt進行前端開發，同時使用ASP.NET Core進行後端開發。在建築工程領域，我成功地應對了各種挑戰，例如將高設備需求的BIM模型優化為適用於網頁操作，為建築公司開發適當的SaaS解決方案，並運用計算機視覺技術來提升建築工地的安全性和便利性。 \n\n   我目前正在參與一個項目，利用LangChain、GPT和向量搜索技術，擴展建築工程領域的可能性。'
     }
   }
 })
@@ -57,7 +57,7 @@ const links = computed(() => [
   {
     icon: 'mdi-linkedin',
     text: '@prestontseng',
-    href: 'https://www.linkedin.com/in/linkedInAccount'
+    href: 'https://www.linkedin.com/in/prestontseng'
   },
   {
     icon: 'mdi-email',

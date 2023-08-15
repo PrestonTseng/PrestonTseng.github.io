@@ -33,7 +33,7 @@ const { t } = useI18n({
   }
 })
 
-const certifications = ref([
+const certifications = computed(() => [
   {
     title: t('languages'),
     items: [

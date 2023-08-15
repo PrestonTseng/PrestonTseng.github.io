@@ -10,7 +10,10 @@
         <div class="text-subtitle-1">{{ edu.school }} | {{ edu.time }}</div>
         <div v-for="(item, itemIdx) in edu.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
           <v-icon small class="pt-1 pr-2">mdi-chevron-right</v-icon>
-          <span>{{ item }}</span>
+          <div>
+            <a :href="item.link" target="_blank">{{ item.title }}</a>
+            <div class="font-italic text-body-2">{{ item.subtitle }}</div>
+          </div>
         </div>
       </div>
     </v-card-text>
@@ -36,7 +39,7 @@ interface Education {
   school: string
   degree: string
   time: string
-  items: string[]
+  items: any
 }
 
 const educations = computed<Education[]>(() => {
@@ -47,18 +50,26 @@ const educations = computed<Education[]>(() => {
           school: '國立臺灣大學',
           degree: '土木工程系 交通工程組 碩士',
           time: '2020 - 2022',
-          items: ['Got a Shin Kong Life Scholarship, which is given to outstanding students in Taiwan.']
+          items: [
+            { title: 'GPA：3.93/4.30' },
+            {
+              title: 'Real‐Time Indoor Localization with Visual SLAM for Emergency Responders',
+              subtitle: 'Automation in Construction, 2022',
+              link: 'https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923'
+            },
+            {
+              title: '應用 Visual SLAM 於建築內緊急救護之即時室內定位',
+              subtitle: '碩士論文, 2022',
+              link: 'https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22110NTU05015122%22.&searchmode=basic'
+            },
+            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: 'SCEM International Conference, 2022', link: null }
+          ]
         },
         {
           school: '國立臺灣大學',
           degree: '土木工程系 學士',
           time: '2016 - 2020',
-          items: [
-            'Overall GPA: 3.92/4.30. Last 60 credits GPA: 4.11/4.30.',
-            'Completed railway transportation curriculum.',
-            'Got a Mr. Yi‑Hsiung Hsieh Memorial Scholarship which is given to outstanding students in Civil Engineering Department.',
-            'Got a Shin Kong Life Scholarship, which is given to outstanding students in Taiwan.'
-          ]
+          items: [{ title: 'GPA：3.92/4.30' }, { title: '完成運輸工程學群。' }]
         }
       ]
 
@@ -69,18 +80,26 @@ const educations = computed<Education[]>(() => {
           school: 'National Taiwan University',
           degree: 'M.S. in Civil Engineering',
           time: '2020 - 2022',
-          items: ['Got a Shin Kong Life Scholarship, which is given to outstanding students in Taiwan.']
+          items: [
+            { title: 'Overall GPA: 3.93/4.30.' },
+            {
+              title: 'Real‐Time Indoor Localization with Visual SLAM for Emergency Responders',
+              subtitle: 'Automation in Construction, 2022',
+              link: 'https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923'
+            },
+            {
+              title: 'Real‐Time Indoor Localization with Visual SLAM for In‐building Emergency Response',
+              subtitle: 'Master Thesis, 2022',
+              link: 'https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22110NTU05015122%22.&searchmode=basic'
+            },
+            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: 'SCEM International Conference, 2022', link: null }
+          ]
         },
         {
           school: 'National Taiwan University',
           degree: 'B.S. in Civil Engineering',
           time: '2016 - 2020',
-          items: [
-            'Overall GPA: 3.92/4.30. Last 60 credits GPA: 4.11/4.30.',
-            'Completed railway transportation curriculum.',
-            'Got a Mr. Yi‑Hsiung Hsieh Memorial Scholarship which is given to outstanding students in Civil Engineering Department.',
-            'Got a Shin Kong Life Scholarship, which is given to outstanding students in Taiwan.'
-          ]
+          items: [{ title: 'Overall GPA: 3.92/4.30.' }, { title: 'Completed railway transportation curriculum.' }]
         }
       ]
   }
