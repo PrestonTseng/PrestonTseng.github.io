@@ -1,21 +1,21 @@
 <template>
   <v-app :theme="theme" :class="bgcolor">
-    <v-app-bar floating flat density="compact" color="transparent">
-      <v-tabs bg-color="transparent" color="primary" style="position: absolute; left: 50%; transform: translate(-50%)">
-        <v-tab to="/"> About </v-tab>
-        <v-tab to="projects">Projects</v-tab>
-        <v-tab to="blog">Blog</v-tab>
-      </v-tabs>
-      <v-spacer></v-spacer>
-      <!-- <lang-switch></lang-switch>
-      <theme-switch v-model:theme="theme"></theme-switch> -->
+    <v-app-bar floating flat density="default">
+      <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
+      <template v-slot:append>
+        <v-btn to="/" color="primary">About</v-btn>
+        <v-btn to="portfolio" color="primary">Portfolio</v-btn>
+        <v-btn to="notes" color="primary">Notes</v-btn>
+        <lang-switch></lang-switch>
+      </template>
+     
+      <!-- <theme-switch v-model:theme="theme"></theme-switch> -->
     </v-app-bar>
 
     <v-main>
       <slot />
+      <v-footer class="bg-secondary-container text-caption d-flex align-center justify-center"> Copyright © All rights reserved. </v-footer>
     </v-main>
-
-    <v-footer app class="bg-secondary-container text-caption d-flex align-center"> Copyright © All rights reserved. </v-footer>
   </v-app>
 </template>
 
