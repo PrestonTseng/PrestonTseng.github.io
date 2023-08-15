@@ -7,11 +7,11 @@
     <v-card-text>
       <div v-for="(skill, index) in skills" :key="index" class="py-2">
         <div class="text-subtitle-1 font-weight-bold">{{ skill.title }}</div>
-        <div class="text-secondary d-flex align-center">
+        <div class="text-secondary d-flex flex-wrap align-center">
           <div v-for="(item, index) in skill.items" :key="index" class="d-flex align-center py-3">
-            <span v-if="index > 0" class="mx-3">|</span>
             <v-icon v-if="item.icon" small class="pt-1 pr-2">{{ item.icon }}</v-icon>
             <span>{{ item.name }}</span>
+            <span v-if="index < skill.items.length - 1" class="mx-3">|</span>
           </div>
         </div>
       </div>

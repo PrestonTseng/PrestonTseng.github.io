@@ -14,6 +14,8 @@
     <v-main>
       <slot />
     </v-main>
+
+    <v-footer app class="bg-secondary-container text-caption d-flex align-center"> Copyright © All rights reserved. </v-footer>
   </v-app>
 </template>
 

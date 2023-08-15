@@ -4,17 +4,21 @@
       <v-col cols="12">
         <about-introduction></about-introduction>
       </v-col>
-      <v-col cols="12" lg="9">
-        <about-skills></about-skills>
+      <v-col cols="12" lg="6">
+        <v-col cols="12">
+          <about-experiences></about-experiences>
+        </v-col>
+        <v-col cols="12">
+          <about-certifications></about-certifications>
+        </v-col>
       </v-col>
-      <v-col cols="12" lg="3">
-        <about-certifications></about-certifications>
-      </v-col>
-      <v-col cols="6">
-        <about-experiences></about-experiences>
-      </v-col>
-      <v-col cols="6">
-        <about-education></about-education>
+      <v-col cols="12" lg="6">
+        <v-col cols="12">
+          <about-skills></about-skills>
+        </v-col>
+        <v-col cols="12">
+          <about-education></about-education>
+        </v-col>
       </v-col>
     </v-row>
   </v-container>

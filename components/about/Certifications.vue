@@ -5,9 +5,9 @@
       <span>{{ t('certifications') }}</span>
     </v-card-title>
     <v-card-text>
-      <div v-for="(certification, index) in certifications" :key="index" class="py-2">
+      <div v-for="(certification, index) in certifications" :key="index" class="py-4">
         <div class="text-subtitle-1 font-weight-bold">{{ certification.title }}</div>
-        <div v-for="(item, itemIdx) in certification.items" :key="itemIdx" class="py-3 d-flex align-center justify-start text-secondary">
+        <div v-for="(item, itemIdx) in certification.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
           <v-icon small class="pt-1 pr-2">mdi-chevron-right</v-icon>
           <span>{{ item.name }}</span>
         </div>

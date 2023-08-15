@@ -1,27 +1,29 @@
 <template>
-  <v-card color="transparent" flat >
-    <v-row align="center" justify="center">
-      <v-col cols="12" class="d-flex flex-column align-center justify-center" style="padding-top: 148px">
-        <div class="text-h1 font-weight-black text-primary">{{ t('prologue') }}</div>
-      </v-col>
-      <v-col cols="12" class="d-flex align-center justify-center my-16">
-        <v-row>
-          <v-col cols="12" lg="4" class="d-flex flex-column align-center justify-center">
-            <v-img class="rounded-xl" :aspect-ratio="1" max-height="300" max-width="300" src="assets/profile-photo.jpg" cover></v-img>
-          </v-col>
-          <v-col cols="12" lg="8" class="d-flex flex-column align-start justify-center" style="white-space: pre-line">
-            <span class="text-h4 font-weight-bold py-4 text-primary">{{ t('shortIntro') }}</span>
-            <span class="text-subtitle-1 py-4 text-secondary">{{ t('longIntro') }}</span>
-            <div class="d-flex align-start justify-start py-4 text-contrast" style="margin-left: -16px">
-              <v-btn v-for="(link, index) in links" :key="index" variant="plain" :ripple="false" :href="link.href">
-                <v-icon left size="large">{{ link.icon }}</v-icon>
-                <span class="pl-2 text-body-2">{{ link.text }}</span>
-              </v-btn>
-            </div>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
+  <v-card color="transparent" flat>
+    <v-card-text>
+      <v-row align="center" justify="center">
+        <v-col cols="12" class="d-flex flex-column align-center justify-center" style="padding-top: 148px">
+          <div class="text-h1 font-weight-black text-primary">{{ t('prologue') }}</div>
+        </v-col>
+        <v-col cols="12" class="d-flex align-center justify-center my-16">
+          <v-row>
+            <v-col cols="12" lg="4" class="d-flex flex-column align-center justify-center">
+              <v-img class="rounded-xl" :aspect-ratio="1" max-height="300" max-width="300" src="assets/profile-photo.jpg" cover></v-img>
+            </v-col>
+            <v-col cols="12" lg="8" class="d-flex flex-column align-start justify-center" style="white-space: pre-line">
+              <span class="text-h4 font-weight-bold py-4 text-primary">{{ t('shortIntro') }}</span>
+              <span class="text-subtitle-1 py-4 text-secondary">{{ t('longIntro') }}</span>
+              <div class="d-flex align-start justify-start py-4 text-contrast" style="margin-left: -16px">
+                <v-btn v-for="(link, index) in links" :key="index" variant="plain" :ripple="false" :href="link.href">
+                  <v-icon left size="large">{{ link.icon }}</v-icon>
+                  <span class="pl-2 text-body-2">{{ link.text }}</span>
+                </v-btn>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-card-text>
   </v-card>
 </template>
 
