@@ -1,14 +1,16 @@
 <template>
   <v-app :theme="theme" :class="bgcolor">
     <v-app-bar floating flat density="default">
-      <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
+      <v-btn variant="plain" active :ripple="false" to="/">
+        <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
+      </v-btn>
       <template v-slot:append>
         <v-btn to="/" color="primary">About</v-btn>
         <v-btn to="portfolio" color="primary">Portfolio</v-btn>
         <v-btn to="notes" color="primary">Notes</v-btn>
         <lang-switch></lang-switch>
       </template>
-     
+
       <!-- <theme-switch v-model:theme="theme"></theme-switch> -->
     </v-app-bar>
 
