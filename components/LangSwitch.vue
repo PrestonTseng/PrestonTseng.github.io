@@ -1,5 +1,5 @@
 <template>
-  <v-menu open-on-hover location="bottom">
+  <v-menu location="bottom">
     <template v-slot:activator="{ props }">
       <v-btn v-bind="props" width="92" :ripple="false">{{ currentLocaleName }} </v-btn>
     </template>
