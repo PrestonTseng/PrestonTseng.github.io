@@ -1,1 +1,0 @@
-import{e,M as n}from"./entry.ddf6b56c.js";const s=e({class:[String,Array],style:{type:[String,Array,Object],default:null}},"component");function o(t){const r=n("useRender");r.render=t}const p=e({tag:{type:String,default:"div"}},"tag");export{p as a,s as m,o as u};
