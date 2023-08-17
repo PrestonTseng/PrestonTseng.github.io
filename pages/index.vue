@@ -3,7 +3,7 @@
     <v-row align="start" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
       <v-col cols="12" lg="3">
-        <v-img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="images/profile-photo.jpg" lazy-src="images/profile-photo-sm.jpeg" cover>
+        <v-img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/assets/images/profile-photo.jpg" lazy-src="~/assets/images/profile-photo-sm.jpeg" cover>
           <template v-slot:placeholder>
             <div class="d-flex align-center justify-center fill-height">
               <v-progress-circular indeterminate color="grey-lighten-4"></v-progress-circular>

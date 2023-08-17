@@ -71,8 +71,8 @@ const skills = computed(() => [
     title: t('maching-learning'),
     items: [
       { icon: 'mdi-language-python', name: 'Python' },
-      { icon: 'icons/pytorch.svg', name: 'Pytorch' },
-      { icon: 'icons/openai.svg', name: 'Azure OpenAI' }
+      { icon: '~/assets/icons/pytorch.svg', name: 'Pytorch' },
+      { icon: '~/assets/icons/openai.svg', name: 'Azure OpenAI' }
     ]
   },
   {
