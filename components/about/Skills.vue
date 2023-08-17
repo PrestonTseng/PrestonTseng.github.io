@@ -9,8 +9,9 @@
         <div class="text-subtitle-1 font-weight-bold">{{ skill.title }}</div>
         <div class="text-secondary d-flex flex-wrap align-center">
           <div v-for="(item, index) in skill.items" :key="index" class="d-flex align-center py-3">
-            <v-icon v-if="item.icon" small class="pt-1 pr-2">{{ item.icon }}</v-icon>
-            <span>{{ item.name }}</span>
+            <v-icon v-if="item.icon && item.icon.startsWith('mdi')" small class="pt-1 pr-2 text-medium-emphasis" :icon="item.icon"></v-icon>
+            <img v-else-if="item.icon" :src="item.icon" height="21" class="pr-2 pt-1" />
+            <span class="text-medium-emphasis">{{ item.name }}</span>
             <span v-if="index < skill.items.length - 1" class="mx-3">|</span>
           </div>
         </div>
@@ -30,6 +31,7 @@ const { t } = useI18n({
       'front-end': 'front-end',
       'back-end': 'back-end',
       programming: 'programming',
+      'maching-learning': 'Maching Learning',
       devops: 'DevOps'
     },
     'zh-TW': {
@@ -37,6 +39,7 @@ const { t } = useI18n({
       'front-end': '網頁前端',
       'back-end': '網頁後端',
       programming: '程式語言',
+      'maching-learning': '機器學習',
       devops: 'DevOps'
     }
   }
@@ -61,14 +64,15 @@ const skills = computed(() => [
     items: [
       { icon: 'mdi-language-csharp', name: 'C#' },
       { icon: 'mdi-dot-net', name: 'ASP.NET Core' },
-      { icon: 'mdi-database-search', color: 'blue', name: 'MySQL' }
+      { icon: 'mdi-database-search', name: 'MySQL' }
     ]
   },
   {
-    title: t('programming'),
+    title: t('maching-learning'),
     items: [
-      { icon: 'mdi-language-python', color: 'blue', name: 'Python' },
-      { icon: 'mdi-language-cpp', color: 'blue', name: 'C++' }
+      { icon: 'mdi-language-python', name: 'Python' },
+      { icon: 'icons/pytorch.svg', name: 'Pytorch' },
+      { icon: 'icons/openai.svg', name: 'Azure OpenAI' }
     ]
   },
   {

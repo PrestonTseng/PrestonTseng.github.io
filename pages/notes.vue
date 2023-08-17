@@ -1,12 +1,9 @@
 <template>
   <v-container style="max-width: 1440px; min-height: calc(100vh - 100px)">
-    <v-row align="start" justify="center">
-      <v-col cols="12">
-        <v-img src="images/working.jpg" lazy-src="images/working-sm.jpeg" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)" width="100%" cover eager>
-          <v-row class="ma-0" style="height: 70%" align="center" justify="center">
-            <div class="font-weight-light" :class="{ 'text-h1': lgAndUp, 'text-h2': mdAndDown, 'text-h4': smAndDown }">{{ t('inProgress') }}</div>
-          </v-row>
-        </v-img>
+    <v-row align="center" justify="center">
+      <v-col cols="12" class="d-flex flex-column align-center">
+        <img src="images/computer_penguin.png" width="360" />
+        <div class="font-weight-light text-primary text-h2">{{ t('inProgress') }}</div>
       </v-col>
     </v-row>
   </v-container>

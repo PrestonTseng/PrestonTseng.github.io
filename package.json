@@ -1,6 +1,5 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "preston-tseng-website",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

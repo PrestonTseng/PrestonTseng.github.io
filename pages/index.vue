@@ -12,16 +12,16 @@
         </v-img>
       </v-col>
       <v-col cols="12" lg="7">
-        <v-card flat>
+        <v-card flat color="transparent">
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
           <div class="text-h3 font-weight-medium text-primary px-2 pb-4" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
-          <v-card-text class="text-body-1 text-secondary" style="white-space: pre-line">{{ t('longIntro') }}</v-card-text>
-          <v-card-action>
+          <v-card-text class="text-body-1 text-secondary text-medium-emphasis" style="white-space: pre-line">{{ t('longIntro') }}</v-card-text>
+          <v-card-actions>
             <v-btn v-for="(link, index) in links" :key="index" variant="plain" :ripple="false" :href="link.href" target="_blank">
               <v-icon left size="large">{{ link.icon }}</v-icon>
               <span class="pl-2 text-body-2">{{ link.text }}</span>
             </v-btn>
-          </v-card-action>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" style="height: 50px"></v-col>
@@ -29,13 +29,13 @@
         <v-col cols="12">
           <about-experiences></about-experiences>
         </v-col>
-        <v-col cols="12">
-          <about-certifications></about-certifications>
-        </v-col>
       </v-col>
       <v-col cols="12" lg="6">
         <v-col cols="12">
           <about-skills></about-skills>
+        </v-col>
+        <v-col cols="12">
+          <about-certifications></about-certifications>
         </v-col>
         <v-col cols="12">
           <about-education></about-education>

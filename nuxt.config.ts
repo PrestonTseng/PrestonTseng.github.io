@@ -50,27 +50,10 @@ export default defineNuxtConfig({
               light: {
                 dark: false,
                 colors: {
-                  error: '#FF5252',
-                  info: '#2196F3',
-                  success: '#4CAF50',
-                  warning: '#FFC107',
-                  'primary': color['--color-green500'],
-                  'secondary': color['--color-green600'],
-                  'tertiary': color['--color-beige'],
-                  'quarterly': color['--color-green300'],
-                  'hilite': color['--color-green400'],
-                  'active': color['--color-white'],
-                  'bold': color['--color-green700'],
-                  'contrast': color['--color-green800'],
-                  'ai': color['--spectrum-purple-600'],
-                  'bg-primary': color['--color-beige'],
-                  'bg-primary-accent': color['--color-green500'],
-                  'bg-primary-border': color['--color-white'],
-                  'bg-tertiary': color['--color-green300'],
-                  opaque: 'hsla(0, 0%, 100%, .5)',
-                  selector: color['--color-white'],
-                  light: color['--color-white'],
-                  dark: color['--color-black']
+                  'primary': '#3A6AB3',
+                  'secondary': '#414656',
+                  'tertiary': '#A6ABBD',  
+                  'contrast': '#E97D91'
                 }
               }
             }

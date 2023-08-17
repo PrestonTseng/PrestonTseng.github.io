@@ -2,7 +2,7 @@
   <v-card color="transparent" flat>
     <v-card-title class="text-capitalize text-primary d-flex align-center">
       <v-icon class="mr-2">mdi-school</v-icon>
-      <span>{{ t('education') }}</span>
+      <span>{{ t('educations') }}</span>
     </v-card-title>
     <v-card-text>
       <div v-for="(edu, index) in educations" :key="index" class="py-4">
@@ -11,7 +11,10 @@
         <div v-for="(item, itemIdx) in edu.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
           <v-icon small class="pt-1 pr-2">mdi-chevron-right</v-icon>
           <div>
-            <a :href="item.link" target="_blank">{{ item.title }}</a>
+            <nuxt-link :to="item.link" target="_blank" class="text-secondary">
+              <span>{{ item.title }}</span>
+              <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
+            </nuxt-link>
             <div class="font-italic text-body-2">{{ item.subtitle }}</div>
           </div>
         </div>

@@ -14,7 +14,7 @@
       <!-- <theme-switch v-model:theme="theme"></theme-switch> -->
     </v-app-bar>
 
-    <v-main>
+    <v-main class="bg-bg-primary">
       <slot />
       <v-footer class="bg-secondary-container text-caption d-flex align-center justify-center"> Copyright © All rights reserved. </v-footer>
     </v-main>
