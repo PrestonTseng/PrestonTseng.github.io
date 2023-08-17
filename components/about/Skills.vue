@@ -23,8 +23,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import pytorchSvg from '~/assets/icons/pytorch.svg'
-import openAiSvg from '~/assets/icons/openai.svg'
+import pytorchSvg from '../assets/icons/pytorch.svg'
+import openAiSvg from '../assets/icons/openai.svg'
 
 const { t } = useI18n({
   messages: {
