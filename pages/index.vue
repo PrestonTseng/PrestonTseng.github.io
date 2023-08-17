@@ -3,7 +3,7 @@
     <v-row align="start" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
       <v-col cols="12" lg="3" class="text-center">
-        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/assets/images/profile_photo.png"/>
+        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png"/>
       </v-col>
       <v-col cols="12" lg="7">
         <v-card flat color="transparent">
