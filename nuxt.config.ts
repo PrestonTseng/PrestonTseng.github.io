@@ -62,13 +62,13 @@ export default defineNuxtConfig({
             code: 'en',
             iso: 'en-US',
             file: 'en.json',
-            name: 'en'
+            name: 'English'
           },
           {
             code: 'zh-TW',
             iso: 'zh-TW',
             file: 'zh-TW.json',
-            name: '	zh-TW'
+            name: '	繁體中文'
           }
         ],
         strategy: 'no_prefix',
