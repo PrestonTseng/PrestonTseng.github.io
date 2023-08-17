@@ -23,6 +23,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import pytorchSvg from '~/assets/icons/pytorch.svg'
+import openAiSvg from '~/assets/icons/openai.svg'
 
 const { t } = useI18n({
   messages: {
@@ -71,8 +73,8 @@ const skills = computed(() => [
     title: t('maching-learning'),
     items: [
       { icon: 'mdi-language-python', name: 'Python' },
-      { icon: '~/assets/icons/pytorch.svg', name: 'Pytorch' },
-      { icon: '~/assets/icons/openai.svg', name: 'Azure OpenAI' }
+      { icon: pytorchSvg, name: 'Pytorch' },
+      { icon: openAiSvg, name: 'Azure OpenAI' }
     ]
   },
   {

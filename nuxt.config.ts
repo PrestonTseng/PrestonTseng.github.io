@@ -3,8 +3,18 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: '/',
-    buildAssetsDir: 'assets'
+    baseURL: '',
+    buildAssetsDir: 'assets',
+    head: {
+      title: 'Preston Tseng',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: "Preston's personal website!" },
+        { name: 'format-detection', content: 'telephone=no' }
+      ],
+      link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.svg' }]
+    }
   },
   devtools: { enabled: true },
   typescript: {
@@ -22,10 +32,10 @@ export default defineNuxtConfig({
               light: {
                 dark: false,
                 colors: {
-                  'primary': '#3A6AB3',
-                  'secondary': '#414656',
-                  'tertiary': '#A6ABBD',  
-                  'contrast': '#E97D91'
+                  primary: '#3A6AB3',
+                  secondary: '#414656',
+                  tertiary: '#A6ABBD',
+                  contrast: '#E97D91'
                 }
               }
             }
