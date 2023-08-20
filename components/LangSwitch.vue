@@ -19,6 +19,7 @@
 import { useI18n } from "vue-i18n";
 
 const { locale, locales, setLocale } = useI18n();
+const switchLocalePath = useSwitchLocalePath()
 
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value);

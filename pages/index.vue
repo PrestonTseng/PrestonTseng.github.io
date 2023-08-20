@@ -1,19 +1,28 @@
 <template>
-  <v-container style="max-width: 1280px">
+  <v-container id="about-containter" style="max-width: 1280px">
     <v-row align="start" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
       <v-col cols="12" lg="3" class="text-center">
-        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png"/>
+        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png" />
       </v-col>
       <v-col cols="12" lg="7">
         <v-card flat color="transparent">
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
           <div class="text-h3 font-weight-medium text-primary px-2 pb-4" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
-          <v-card-text class="text-body-1 text-secondary text-medium-emphasis" style="white-space: pre-line">{{ t('longIntro') }}</v-card-text>
+          <v-card-text class="text-body-2 text-secondary text-medium-emphasis" style="white-space: pre-line">{{ t('longIntro') }}</v-card-text>
           <v-card-actions>
-            <v-btn v-for="(link, index) in links" :key="index" variant="plain" :ripple="false" :href="link.href" target="_blank">
-              <v-icon left size="large">{{ link.icon }}</v-icon>
-              <span class="pl-2 text-body-2">{{ link.text }}</span>
+            <v-btn
+              v-for="(link, index) in links"
+              :key="index"
+              size="small"
+              color="secondary"
+              variant="outlined"
+              :ripple="false"
+              :href="link.href"
+              :target="link.target"
+              :icon="link.icon"
+              style="opacity: 0.7"
+            >
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -51,14 +60,12 @@ const { t, locale } = useI18n({
     en: {
       prologue: 'Po Yen Tseng',
       shortIntro: 'Full-Stack Developer',
-      longIntro:
-        'I have 4 years of experience as a front-end engineer and transitioned to a full-stack role a year ago. My expertise lies in utilizing Vue and Nuxt for front-end development, along with ASP.NET Core for back-end development. Within the AEC industry, I have successfully tackled various challenges, such as optimizing high device-requirement BIM models for web operation, developing suitable SaaS solutions for construction companies, and leveraging computer vision technologies to enhance safety and convenience on construction sites. \n\nI am currently working on a project that utilizes LangChain, GPT, and vector search technologies, expanding the possibilities in the AEC industry.'
+      longIntro: `With 4 years of front-end experience, I transitioned to a full-stack role a year ago, specializing in Vue.js, Nuxt.js (front-end), and .NET Core with MySQL (back-end). I focus on developing web services for architecture and civil engineering, such as transferring complex BIM models to the web for improved accessibility and collaboration. I also explore tools like Azure OpenAI and Cognitive Search to enhance document retrieval and analysis. My aim is to innovate and drive digital transformation in this field.`
     },
     'zh-TW': {
       prologue: '曾柏硯',
       shortIntro: '全端工程師',
-      longIntro:
-        '我擁有4年的前端工程師經驗，並於一年前轉向全端角色。我的專業領域在於使用Vue和Nuxt進行前端開發，同時使用ASP.NET Core進行後端開發。在建築工程領域，我成功地應對了各種挑戰，例如將高設備需求的BIM模型優化為適用於網頁操作，為建築公司開發適當的SaaS解決方案，並運用計算機視覺技術來提升建築工地的安全性和便利性。 \n\n   我目前正在參與一個項目，利用LangChain、GPT和向量搜索技術，擴展建築工程領域的可能性。'
+      longIntro: `從高中開始，我便持續自學網頁開發，至今已有４年前端工作經驗．１年前因現職工作需求，開始涉獵後端，作為全端工程師，同時負責前後端的開發。前端方面主要使用 Vue.js 和 Nuxt.js 進行開發。而後端方面則採用 .NET Core 搭配 MySQL。 在目前的職務上致力於研發各種網路服務，為建築和土木工程領域提供數位轉型的解決方案。例如將原本需要高度圖像處理設備的 BIM 模型轉移到網頁上，打破了設備的限制，讓各種不同的設備和環境都能立即查看和協作。此外，我也持續學習並嘗試新工具，例如運用 Azure OpenAI 和 Cognitive Search 技術，讓過去的建築和土木工程文件以及工程圖紙能夠輕鬆地被檢索和分析。我的使命是不斷探索創新的解決方案，推動建築與土木工程領域的數位化進程。`
     }
   }
 })
@@ -67,19 +74,23 @@ const links = computed(() => [
   {
     icon: 'mdi-github',
     text: 'GitHub',
-    href: 'https://github.com/prestontseng'
+    href: 'https://github.com/prestontseng',
+    target: '_blank'
   },
   {
     icon: 'mdi-linkedin',
     text: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/prestontseng'
+    href: 'https://www.linkedin.com/in/prestontseng',
+    target: '_blank'
   },
   {
     icon: 'mdi-email',
     text: 'Email',
-    href: 'mailto:csps50404@gmail.com'
+    href: 'mailto:csps50404@gmail.com',
+    target: '_blank'
   }
 ])
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+</style>

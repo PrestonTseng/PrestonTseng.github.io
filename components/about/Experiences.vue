@@ -132,12 +132,6 @@ const experiences = computed<Experience[]>(() => {
             { type: 'item', text: 'Developed several web projects.' },
             { type: 'item', text: 'Developed a real estate analysis service called ”MotherMong3000”.' }
           ]
-        },
-        {
-          company: 'Smart Ageing Tech CO., LTD',
-          position: 'Front-end Developer Intern',
-          time: '2018 - 2018',
-          items: [{ type: 'item', text: 'Developed the blood testing module of long-term care system' }]
         }
       ]
   }

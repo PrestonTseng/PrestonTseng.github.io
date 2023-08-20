@@ -1,6 +1,6 @@
 <template>
   <v-app :theme="theme" :class="bgcolor">
-    <v-app-bar floating flat density="default">
+    <v-app-bar floating flat density="default" class="d-print-none">
       <v-btn variant="plain" active :ripple="false" to="/">
         <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
       </v-btn>
@@ -16,10 +16,10 @@
 
     <v-main class="bg-bg-primary">
       <slot />
-      <v-footer class="bg-secondary-container text-caption d-flex align-center justify-center"> Copyright © All rights reserved. </v-footer>
+      <v-footer class="bg-secondary-container text-caption d-flex align-center justify-center d-print-none"> Copyright © All rights reserved. </v-footer>
     </v-main>
 
-    <v-bottom-navigation v-if="!lgAndUp" grow bg-color="primary">
+    <v-bottom-navigation v-if="!lgAndUp" grow bg-color="primary" class="d-print-none">
       <v-btn to="/">
         <v-icon>mdi-account</v-icon>
         About

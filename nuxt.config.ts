@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+const baseURL = `https://prestontseng.github.io`
+
+
 export default defineNuxtConfig({
   ssr: true,
   app: {
@@ -34,7 +37,7 @@ export default defineNuxtConfig({
                 colors: {
                   primary: '#3A6AB3',
                   secondary: '#414656',
-                  tertiary: '#A6ABBD',
+                  third: '#A6ABBD',
                   contrast: '#E97D91'
                 }
               }
@@ -56,19 +59,20 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
+        baseUrl: baseURL,
         langDir: 'locales',
         locales: [
-          {
-            code: 'en',
-            iso: 'en-US',
-            file: 'en.json',
-            name: 'English'
-          },
           {
             code: 'zh-TW',
             iso: 'zh-TW',
             file: 'zh-TW.json',
             name: '	繁體中文'
+          },
+          {
+            code: 'en',
+            iso: 'en-US',
+            file: 'en.json',
+            name: 'English'
           }
         ],
         strategy: 'no_prefix',
