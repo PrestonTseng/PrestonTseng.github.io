@@ -1,15 +1,15 @@
 <template>
   <v-container id="about-containter" style="max-width: 1280px">
-    <v-row align="start" justify="center">
+    <v-row align="center" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
-      <v-col cols="12" lg="3" class="text-center">
+      <v-col cols="12" lg="4" class="text-center">
         <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png" />
       </v-col>
       <v-col cols="12" lg="7">
         <v-card flat color="transparent">
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
-          <div class="text-h3 font-weight-medium text-primary px-2 pb-4" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
-          <v-card-text class="text-body-2 text-secondary text-medium-emphasis" style="white-space: pre-line">{{ t('longIntro') }}</v-card-text>
+          <div class="text-h3 font-weight-medium text-primary px-2 pb-2" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
+          <v-card-text class="text-secondary text-medium-emphasis" style="white-space: pre-line; line-height: 1.5rem; font-size:0.95rem">{{ t('longIntro') }}</v-card-text>
           <v-card-actions>
             <v-btn
               v-for="(link, index) in links"
