@@ -5,9 +5,9 @@
         <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
       </v-btn>
       <template v-slot:append>
-        <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn>
+        <!-- <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn>
         <v-btn v-if="lgAndUp" to="portfolio" color="primary">Portfolio</v-btn>
-        <v-btn v-if="lgAndUp" to="notes" color="primary">Notes</v-btn>
+        <v-btn v-if="lgAndUp" to="notes" color="primary">Notes</v-btn> -->
         <lang-switch></lang-switch>
       </template>
 
@@ -19,7 +19,7 @@
       <v-footer class="bg-secondary-container text-caption d-flex align-center justify-center d-print-none"> Copyright © All rights reserved. </v-footer>
     </v-main>
 
-    <v-bottom-navigation v-if="!lgAndUp" grow bg-color="primary" class="d-print-none">
+    <!-- <v-bottom-navigation v-if="!lgAndUp" grow bg-color="primary" class="d-print-none">
       <v-btn to="/">
         <v-icon>mdi-account</v-icon>
         About
@@ -32,7 +32,7 @@
         <v-icon>mdi-post-outline</v-icon>
         Notes
       </v-btn>
-    </v-bottom-navigation>
+    </v-bottom-navigation> -->
   </v-app>
 </template>
 
