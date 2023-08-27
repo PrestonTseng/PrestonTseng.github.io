@@ -96,6 +96,8 @@ const experiences = computed<Experience[]>(() => {
           position: 'Research and Development Engineer',
           time: '2019 -',
           items: [
+            { type: 'subtitle', text: 'Machine Learning' },
+            { type: 'item', text: 'Utilized Microsoft OpenAI and Cognitive Search to develop an enterprise knowledge management service.' },
             { type: 'subtitle', text: 'Web Backend' },
             { type: 'item', text: 'Developed SyncoBox EIP.' },
             { type: 'item', text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
@@ -105,7 +107,7 @@ const experiences = computed<Experience[]>(() => {
             { type: 'subtitle', text: 'Web Frontend' },
             {
               type: 'item',
-              text: "Played a key role in developing model browsing components and SDK for SyncoBox Design Automation Service.",
+              text: 'Played a key role in developing model browsing components and SDK for SyncoBox Design Automation Service.',
               link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/'
             },
             { type: 'item', text: 'Contributed to the integration and development of related components for Autodesk Platform Service Viewer.' },
@@ -119,9 +121,7 @@ const experiences = computed<Experience[]>(() => {
             },
             { type: 'item', text: 'Developed SyncoBox Markup Service, reducing paper-based discussions by 50% during architectural design.' },
             { type: 'item', text: 'Developed SyncoBox Facility Management Service based on BIM models, increasing maintenance efficiency by 40%.' },
-            { type: 'item', text: 'Utilized computer vision and BIM models to develop CCTV electronic fences and alarm systems, enhancing worker safety.' },
-            { type: 'subtitle', text: 'Machine Learning' },
-            { type: 'item', text: 'Utilized Microsoft OpenAI and Cognitive Search to develop an enterprise knowledge management service.' }
+            { type: 'item', text: 'Utilized computer vision and BIM models to develop CCTV electronic fences and alarm systems, enhancing worker safety.' }
           ]
         },
         {
