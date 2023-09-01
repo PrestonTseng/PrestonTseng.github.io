@@ -79,12 +79,6 @@ const experiences = computed<Experience[]>(() => {
             { type: 'item', text: '負責數個獨立前端網站項目' },
             { type: 'item', text: '開發量化房地產分析服務 「MotherMong3000」' }
           ]
-        },
-        {
-          company: '智齡科技股份有限公司',
-          position: '前端實習工程師',
-          time: '2018 - 2018',
-          items: [{ type: 'item', text: '利用 React/Redux 開發長期護理系統的血液檢查結果查詢頁面' }]
         }
       ]
 
