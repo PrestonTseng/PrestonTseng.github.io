@@ -1,6 +1,6 @@
 <template>
   <v-container id="about-containter" style="max-width: 1280px">
-    <v-row align="center" justify="center">
+    <v-row align="start" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
       <v-col cols="12" lg="4" class="text-center">
         <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png" />
