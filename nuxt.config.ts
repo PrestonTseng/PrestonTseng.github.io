@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     baseURL: '',
+    buildAssetsDir: 'assets',
     head: {
       title: 'Preston Tseng',
       meta: [
