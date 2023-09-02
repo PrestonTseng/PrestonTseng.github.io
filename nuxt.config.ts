@@ -6,14 +6,13 @@ const baseURL = `https://prestontseng.github.io`
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: '',
+    baseURL: '/',
     buildAssetsDir: 'assets',
     head: {
-      title: 'Preston Tseng',
+      title: `Preston's Website`,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: "Preston's personal website!" },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.ico' }]
@@ -59,7 +58,7 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
-        baseUrl: baseURL,
+        baseUrl: "/",
         langDir: 'locales',
         locales: [
           {
@@ -75,7 +74,7 @@ export default defineNuxtConfig({
             name: 'English'
           }
         ],
-        strategy: 'no_prefix',
+        strategy: 'prefix',
         defaultLocale: 'en',
         detectBrowserLanguage: {
           useCookie: true,

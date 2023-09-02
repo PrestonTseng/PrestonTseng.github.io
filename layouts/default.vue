@@ -38,10 +38,17 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useDisplay } from 'vuetify'
-const { smAndUp, mdAndUp, lgAndUp, xlAndUp } = useDisplay()
 
-const background = ref(`https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80`)
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
+
+useHead({
+  htmlAttrs: { lang: head.value.htmlAttrs?.lang, dir: head.value.htmlAttrs?.dir }
+})
+
 const nav = ref(0)
 const theme = ref('light')
 const bgcolor = computed(() => (theme.value === 'light' ? 'primary' : ''))

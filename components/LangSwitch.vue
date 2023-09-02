@@ -7,6 +7,7 @@
       <v-list-item
         v-for="locale in availableLocales"
         :key="locale.code"
+        :to="switchLocalePath(locale.code)"
         @click="setLocale(locale.code)"
       >
         <v-list-item-title>{{ locale.name }}</v-list-item-title>
