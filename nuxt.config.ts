@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     baseURL: '',
-    buildAssetsDir: 'assets',
     head: {
       title: 'Preston Tseng',
       meta: [
@@ -16,7 +15,7 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: "Preston's personal website!" },
         { name: 'format-detection', content: 'telephone=no' }
       ],
-      link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.svg' }]
+      link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.ico' }]
     }
   },
   devtools: { enabled: true },
