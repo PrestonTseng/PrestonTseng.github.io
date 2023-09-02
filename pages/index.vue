@@ -9,7 +9,7 @@
         <v-card flat color="transparent">
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
           <div class="text-h3 font-weight-medium text-primary px-2 pb-2" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
-          <v-card-text class="text-secondary text-medium-emphasis" style="white-space: pre-line; line-height: 1.5rem; font-size:0.95rem">{{ t('longIntro') }}</v-card-text>
+          <v-card-text class="text-secondary text-medium-emphasis" style="white-space: pre-line; line-height: 1.5rem; font-size: 0.95rem">{{ t('longIntro') }}</v-card-text>
           <v-card-actions>
             <v-btn
               v-for="(link, index) in links"
@@ -20,9 +20,11 @@
               :ripple="false"
               :href="link.href"
               :target="link.target"
-              :icon="link.icon"
+              class="rounded-pill"
               style="opacity: 0.7"
             >
+              <v-icon left :icon="link.icon" class="px-1 pr-2"></v-icon>
+              <span class="text-capitalize">{{ link.text }}</span>
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -85,12 +87,11 @@ const links = computed(() => [
   },
   {
     icon: 'mdi-email',
-    text: 'Email',
+    text: 'E-mail',
     href: 'mailto:csps50404@gmail.com',
     target: '_blank'
   }
 ])
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

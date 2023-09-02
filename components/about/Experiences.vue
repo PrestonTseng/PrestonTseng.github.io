@@ -9,11 +9,16 @@
         <div class="text-subtitle-1 font-weight-bold">{{ exp.position }}</div>
         <div class="text-subtitle-1">{{ exp.company }} | {{ exp.time }}</div>
         <div v-for="(item, itemIdx) in exp.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
-          <v-icon v-if="item.type == 'item'" small class="pt-1 pr-2">mdi-chevron-right</v-icon>
-          <nuxt-link :to="item.link" target="_blank" class="text-secondary" :class="{ 'mt-4 font-weight-bold': item.type == 'subtitle' }">
-            <span>{{ item.text }}</span>
-            <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
-          </nuxt-link>
+          <template v-if="item.type == 'subtitle'">
+            <span class="mt-4 font-weight-bold">{{ item.text }}</span>
+          </template>
+          <template v-else>
+            <v-icon small class="pr-2">mdi-chevron-right</v-icon>
+            <nuxt-link :to="item.link" target="_blank" class="text-secondary">
+              <span>{{ item.text }}</span>
+              <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
+            </nuxt-link>
+          </template>
         </div>
       </div>
     </v-card-text>
@@ -51,6 +56,8 @@ const experiences = computed<Experience[]>(() => {
           position: '研發工程師',
           time: '2019 - 現職',
           items: [
+            { type: 'subtitle', text: '機器學習' },
+            { type: 'item', text: '利用 Azure OpenAI 與 Cognitive Search 開發企業知識管理系統' },
             { type: 'subtitle', text: '網頁後端' },
             { type: 'item', text: '開發 SyncoBox EIP 的差勤、簽核、費用申請模組' },
             { type: 'item', text: '開發 SyncoBox Automation 流程自動化微服務' },
@@ -66,9 +73,7 @@ const experiences = computed<Experience[]>(() => {
             { type: 'item', text: '以 Web 技術重構 WeBIMSync，做為微服務整合進 SyncoBox', link: 'https://www.syncobox.com/solutions/webimsync' },
             { type: 'item', text: '開發 SyncoBox 模型標記系統，減少建築設計中 50% 的紙本討論工作' },
             { type: 'item', text: '基於 BIM 模型開發 SyncoBox 設備管理系統，提高 40% 的設備維護效率' },
-            { type: 'item', text: '基於電腦視覺與 BIM 模型開發 CCTV 電子柵欄和警報系統，保障工人安全' },
-            { type: 'subtitle', text: '機器學習' },
-            { type: 'item', text: '利用微軟 OpenAI 與 Cognitive Search 開發企業知識管理系統' }
+            { type: 'item', text: '基於電腦視覺與 BIM 模型開發 CCTV 電子柵欄和警報系統，保障工人安全' }
           ]
         },
         {
