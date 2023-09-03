@@ -1,6 +1,6 @@
 <template>
   <v-card variant="flat" class="d-flex pa-2 mb-2 rounded-lg" height="200" :to="article.path">
-    <v-img width="300" max-width="300" :aspect-ratio="16 / 9" :src="defaultImage(article.date)" cover>
+    <v-img class="hover-zoom" width="300" max-width="300" :aspect-ratio="16 / 9" :src="defaultImage(article.date)" cover>
       <template v-slot:placeholder>
         <div class="d-flex align-center justify-center fill-height bg-fourth">
           <v-progress-circular indeterminate color="grey-lighten-4"></v-progress-circular>
@@ -42,11 +42,24 @@ const article = computed(() => props.article)
 const { formatDate } = useDateTimeFormat()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .hover-underline {
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
-.hover-underline:hover {
-  text-decoration: underline;
+
+.hover-zoom {
+  img {
+    transition-duration: .5s!important;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
 }
 </style>
