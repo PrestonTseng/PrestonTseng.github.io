@@ -1,7 +1,7 @@
 <template>
   <v-app :theme="theme" :class="bgcolor">
     <v-app-bar floating flat density="default" class="d-print-none">
-      <v-btn variant="plain" active :ripple="false" to="/">
+      <v-btn variant="plain" active :ripple="false" :to="`/${locale}`">
         <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
       </v-btn>
       <template v-slot:append>
@@ -38,6 +38,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
 
 const head = useLocaleHead({
   addDirAttribute: true,
