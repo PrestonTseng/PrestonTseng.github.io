@@ -36,7 +36,7 @@ const { t } = useI18n({
       'maching-learning': 'Maching Learning',
       devops: 'DevOps'
     },
-    'zh-TW': {
+    'zh-tw': {
       skills: '技能',
       'front-end': '網頁前端',
       'back-end': '網頁後端',

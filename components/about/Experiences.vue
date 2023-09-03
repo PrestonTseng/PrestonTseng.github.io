@@ -34,7 +34,7 @@ const { t, locale } = useI18n({
     en: {
       experiences: 'experiences'
     },
-    'zh-TW': {
+    'zh-tw': {
       experiences: '工作經驗'
     }
   }
@@ -49,7 +49,7 @@ interface Experience {
 
 const experiences = computed<Experience[]>(() => {
   switch (locale.value) {
-    case 'zh-TW':
+    case 'zh-tw':
       return [
         {
           company: '衛武資訊股份有限公司',

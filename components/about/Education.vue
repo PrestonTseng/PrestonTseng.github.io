@@ -32,7 +32,7 @@ const { t, locale } = useI18n({
     en: {
       educations: 'educations'
     },
-    'zh-TW': {
+    'zh-tw': {
       educations: '學術經歷'
     }
   }
@@ -47,7 +47,7 @@ interface Education {
 
 const educations = computed<Education[]>(() => {
   switch (locale.value) {
-    case 'zh-TW':
+    case 'zh-tw':
       return [
         {
           school: '國立臺灣大學',

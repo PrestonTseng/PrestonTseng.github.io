@@ -2,19 +2,20 @@
 
 const baseURL = `https://prestontseng.github.io`
 
-
 export default defineNuxtConfig({
   ssr: true,
+  nitro: {
+    preset: 'service-worker',
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
   app: {
     baseURL: '/',
     buildAssetsDir: 'assets',
     head: {
       title: `Preston's Website`,
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'format-detection', content: 'telephone=no' }
-      ],
+      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { name: 'format-detection', content: 'telephone=no' }],
       link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.ico' }]
     }
   },
@@ -58,13 +59,13 @@ export default defineNuxtConfig({
     [
       '@nuxtjs/i18n',
       {
-        baseUrl: "/",
+        baseUrl: '/',
         langDir: 'locales',
         locales: [
           {
-            code: 'zh-TW',
-            iso: 'zh-TW',
-            file: 'zh-TW.json',
+            code: 'zh-tw',
+            iso: 'zh-tw',
+            file: 'zh-tw.json',
             name: '	繁體中文'
           },
           {
@@ -80,6 +81,17 @@ export default defineNuxtConfig({
           useCookie: true,
           cookieKey: 'i18n_redirected',
           redirectOn: 'root' // recommended
+        }
+      }
+    ],
+    [
+      '@nuxt/content',
+      {
+        experimental: {
+          clientDb: true
+        },
+        markdown: {
+          toc: { depth: 3, searchDepth: 3 }
         }
       }
     ]

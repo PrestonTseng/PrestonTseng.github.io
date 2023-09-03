@@ -26,7 +26,7 @@ const { t } = useI18n({
       certifications: 'certifications',
       languages: 'Languages'
     },
-    'zh-TW': {
+    'zh-tw': {
       certifications: '認證',
       languages: '語言能力'
     }

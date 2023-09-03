@@ -18,7 +18,7 @@ const { t } = useI18n({
     en: {
       inProgress: 'In Progress'
     },
-    'zh-TW': {
+    'zh-tw': {
       inProgress: '準備中'
     }
   }

@@ -65,7 +65,7 @@ const { t } = useI18n({
       shortIntro: 'Full-Stack Developer',
       longIntro: `With 4 years of front-end experience, I transitioned to a full-stack role a year ago, specializing in Vue.js, Nuxt.js (front-end), and .NET Core with MySQL (back-end). I focus on developing web services for architecture and civil engineering, such as transferring complex BIM models to the web for improved accessibility and collaboration. I also explore tools like Azure OpenAI and Cognitive Search to enhance document retrieval and analysis. My aim is to innovate and drive digital transformation in this field.`
     },
-    'zh-TW': {
+    'zh-tw': {
       prologue: '曾柏硯',
       shortIntro: '全端工程師',
       longIntro: `從高中開始，我便持續自學網頁開發，至今已有４年前端工作經驗．１年前因現職工作需求，開始涉獵後端，作為全端工程師，同時負責前後端的開發。前端方面主要使用 Vue.js 和 Nuxt.js 進行開發。而後端方面則採用 .NET Core 搭配 MySQL。 在目前的職務上致力於研發各種網路服務，為建築和土木工程領域提供數位轉型的解決方案。例如將原本需要高度圖像處理設備的 BIM 模型轉移到網頁上，打破了設備的限制，讓各種不同的設備和環境都能立即查看和協作。此外，我也持續學習並嘗試新工具，例如運用 Azure OpenAI 和 Cognitive Search 技術，讓過去的建築和土木工程文件以及工程圖紙能夠輕鬆地被檢索和分析。我的使命是不斷探索創新的解決方案，推動建築與土木工程領域的數位化進程。`
