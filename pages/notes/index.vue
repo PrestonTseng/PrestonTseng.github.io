@@ -25,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
 import { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()

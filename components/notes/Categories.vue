@@ -5,7 +5,7 @@
       <span>{{ t('categories') }}</span>
     </v-card-title>
     <v-list lines="one" density="compact">
-      <v-list-item v-for="(category, index) in categories" :key="index" :to="`notes/categories/${category.name}`">
+      <v-list-item v-for="(category, index) in categories" :key="index" :to="`/${locale}/notes/categories/${category.name}`">
         <v-list-item-title class="d-flex align-center text-subtitle-2">
           <v-icon class="mr-2">mdi-folder-outline</v-icon>
           <span>{{ `${category.name} (${category.counts})` }}</span>
@@ -19,11 +19,6 @@
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-interface Category {
-  name: string
-  counts: number
-}
-
 const { t, locale } = useI18n({
   messages: {
     en: {
@@ -35,11 +30,11 @@ const { t, locale } = useI18n({
   }
 })
 const notes = await queryContent(locale.value, 'notes').find()
-const categories = computed<Category[]>(() =>
+const categories = computed(() =>
   notes
     .map((e) => e.categories)
     .reduce((acc, cur) => {
-      let target = acc.find((e: Category) => e.name == cur)
+      let target = acc.find((e: any) => e.name == cur)
       if (target) target.counts++
       else acc.push({ name: cur, counts: 1 })
       return acc

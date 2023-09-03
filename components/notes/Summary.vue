@@ -42,17 +42,17 @@ const content = computed(() => ({
 
 const summaries = computed(() => [
   {
-    link: `${locale.value}/notes/notes`,
+    link: `/${locale.value}/notes`,
     name: t('notes'),
     counts: notes.length
   },
   {
-    link: `${locale.value}/notes/categories`,
+    link: `/${locale.value}/notes/categories`,
     name: t('categories'),
     counts: notes.map((e: any) => e.categories).reduce((acc, cur) => (acc.includes(cur) ? acc : [...acc, cur]), []).length
   },
   {
-    link: `${locale.value}/notes/tags`,
+    link: `/${locale.value}/notes/tags`,
     name: t('tags'),
     counts: notes
       .map((e: any) => e.tags)
