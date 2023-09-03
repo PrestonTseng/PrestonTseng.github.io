@@ -38,6 +38,7 @@ export default defineNuxtConfig({
                   primary: '#3A6AB3',
                   secondary: '#414656',
                   third: '#A6ABBD',
+                  fourth: '#f3f2f0',
                   contrast: '#E97D91'
                 }
               }

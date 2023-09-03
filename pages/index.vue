@@ -3,14 +3,14 @@
     <v-row align="start" justify="center">
       <v-col cols="12" style="height: 50px"></v-col>
       <v-col cols="12" lg="4" class="text-center">
-        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" src="~/public/images/profile_photo.png" />
+        <img class="rounded-pill mx-auto" :aspect-ratio="1" max-height="280" max-width="280" :src="headshotLg" />
       </v-col>
       <v-col cols="12" lg="7">
         <v-card flat color="transparent">
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
           <div class="text-h3 font-weight-medium text-primary px-2 pb-2" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
           <v-card-text class="text-secondary text-medium-emphasis" style="white-space: pre-line; line-height: 1.5rem; font-size: 0.95rem">{{ t('longIntro') }}</v-card-text>
-          <v-card-actions>
+          <v-card-actionss>
             <v-btn
               v-for="(link, index) in links"
               :key="index"
@@ -26,7 +26,7 @@
               <v-icon left :icon="link.icon" class="px-1 pr-2"></v-icon>
               <span class="text-capitalize">{{ link.text }}</span>
             </v-btn>
-          </v-card-actions>
+          </v-card-actionss>
         </v-card>
       </v-col>
       <v-col cols="12" style="height: 50px"></v-col>
@@ -54,7 +54,8 @@
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
-import headshot from '~/public/images/profile_photo_sm.png'
+import headshotLg from '@/public/images/profile_photo.png'
+import headshot from '@/public/images/profile_photo_sm.png'
 
 const { smAndUp, mdAndUp, lgAndUp, xlAndUp } = useDisplay()
 
