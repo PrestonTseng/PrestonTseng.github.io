@@ -24,7 +24,7 @@
         <notes-summary></notes-summary>
         <notes-latest></notes-latest>
         <notes-categories></notes-categories>
-        <notes-tags :current-tag="tag"></notes-tags>
+        <notes-tags :current-tag="(tag as string)"></notes-tags>
       </v-col>
     </v-row>
   </v-container>

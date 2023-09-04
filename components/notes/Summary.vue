@@ -4,7 +4,7 @@
     <div class="py-1 text-h6 font-weight-medium">{{ content.name }}</div>
     <div class="pb-1 text-body-2">{{ content.title }}</div>
     <v-card-actions class="d-flex align-center jusitfy-center">
-      <v-card v-for="(summary, index) in summaries" :key="index" :to="summary.link" variant="plain" class="pa-2 mx-2 d-flex flex-column align-center text-body-1">
+      <v-card v-for="(summary, index) in summaries" :key="index" :to="summary.link" :ripple="false" variant="plain" class="pa-2 mx-2 d-flex flex-column align-center text-body-1">
         <span>{{ summary.name }}</span>
         <span>{{ summary.counts }}</span>
       </v-card>
