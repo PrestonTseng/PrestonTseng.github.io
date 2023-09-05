@@ -4,9 +4,9 @@
       <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
     </v-btn>
     <template v-slot:append>
-      <!-- <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn>
-          <v-btn v-if="lgAndUp" to="portfolio" color="primary">Portfolio</v-btn>
-          <v-btn v-if="lgAndUp" to="notes" color="primary">Notes</v-btn> -->
+      <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn>
+      <!-- <v-btn v-if="lgAndUp" to="portfolio" color="primary">Portfolio</v-btn> -->
+      <v-btn v-if="lgAndUp" to="notes" color="primary">Notes</v-btn>
       <lang-switch></lang-switch>
     </template>
 
@@ -15,7 +15,9 @@
 </template>
 
 <script setup lang="ts">
+import { useDisplay } from 'vuetify'
 import { useI18n } from 'vue-i18n'
+const { smAndUp, mdAndUp, lgAndUp, xlAndUp } = useDisplay()
 
 const { locale } = useI18n()
 </script>
