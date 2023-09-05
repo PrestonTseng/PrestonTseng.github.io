@@ -5,7 +5,7 @@
       <span>{{ t('tags') }}</span>
     </v-card-title>
 
-    <v-card-text>
+    <v-card-text class="px-2">
       <v-card
         v-for="(tag, index) in tags"
         :key="index"
