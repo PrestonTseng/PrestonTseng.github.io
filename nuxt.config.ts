@@ -93,7 +93,8 @@ export default defineNuxtConfig({
         },
         markdown: {
           mdc: true,
-          toc: { depth: 4, searchDepth: 4 }
+          toc: { depth: 4, searchDepth: 4 },
+          anchorLinks: false
         },
         highlight: {
           theme: {

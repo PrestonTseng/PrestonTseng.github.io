@@ -1,5 +1,7 @@
 <template>
-  <v-list-item :class="`ml-${item.depth * 3}`" variant="plain" density="compact" :ripple="false" @click="onClick">{{ item.text }}</v-list-item>
+  <v-card :class="`pa-2 ml-${item.depth * 3} text-body-2`" variant="plain" density="compact" :ripple="false" @click="onClick">
+    {{ item.text }}
+  </v-card>
   <notes-toc-render-item v-for="child in item.children" :key="child.id" :item="child"></notes-toc-render-item>
 </template>
 <script setup lang="ts">

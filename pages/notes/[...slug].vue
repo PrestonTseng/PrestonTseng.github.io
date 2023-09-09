@@ -12,7 +12,7 @@
         </ContentDoc>
       </v-col>
       <v-col class="sticky" cols="3">
-        <notes-toc-render :toc="doc.body.toc"></notes-toc-render>
+        <notes-toc-render-item v-for="item in doc.body.toc.links" :key="item.id" :item="item"></notes-toc-render-item>
       </v-col>
     </v-row>
   </v-container>
