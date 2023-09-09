@@ -52,7 +52,7 @@ export default defineNuxtConfig({
           useIconCDN: true,
 
           /* vite-plugin-vuetify options */
-          styles: true,
+          styles: 'sass',
           autoImport: true
         }
       }
@@ -92,7 +92,48 @@ export default defineNuxtConfig({
           clientDb: true
         },
         markdown: {
-          toc: { depth: 3, searchDepth: 3 }
+          mdc: true,
+          toc: { depth: 4, searchDepth: 4 }
+        },
+        highlight: {
+          theme: {
+            // Default theme (same as single string)
+            default: 'nord'
+            // Theme used if `html.dark`
+            // dark: 'github-dark',
+            // Theme used if `html.sepia`
+            // sepia: 'monokai'
+            // ---------------------------
+            //  'css-variables'
+            //  'dark-plus'
+            //  'dracula-soft'
+            //  'dracula'
+            //  'github-dark-dimmed'
+            //  'github-dark'
+            //  'github-light'
+            //  'hc_light'
+            //  'light-plus'
+            //  'material-theme-darker'
+            //  'material-theme-lighter'
+            //  'material-theme-ocean'
+            //  'material-theme-palenight'
+            //  'material-theme'
+            //  'min-dark'
+            //  'min-light'
+            //  'monokai'
+            //  'nord'
+            //  'one-dark-pro'
+            //  'poimandres'
+            //  'rose-pine-dawn'
+            //  'rose-pine-moon'
+            //  'rose-pine'
+            //  'slack-dark'
+            //  'slack-ochin'
+            //  'solarized-dark'
+            //  'solarized-light'
+            //  'vitesse-dark'
+            //  'vitesse-light'
+          }
         }
       }
     ]
