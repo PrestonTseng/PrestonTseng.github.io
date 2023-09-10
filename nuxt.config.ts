@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-const baseURL = `https://prestontseng.github.io`
-
 export default defineNuxtConfig({
   ssr: true,
   nitro: {
@@ -94,7 +92,9 @@ export default defineNuxtConfig({
         markdown: {
           mdc: true,
           toc: { depth: 4, searchDepth: 4 },
-          anchorLinks: false
+          anchorLinks: false,
+          tags: {
+          }
         },
         highlight: {
           theme: {
