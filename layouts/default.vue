@@ -1,7 +1,7 @@
 <template>
   <v-app :theme="theme" :class="bgcolor">
     <slot name="header">
-      <app-bar></app-bar>
+      <app-bar class="d-print-none"></app-bar>
     </slot>
 
     <v-main>
