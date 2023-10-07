@@ -51,7 +51,7 @@ const { t, locale } = useI18n({
 
 const limit = ref(10)
 const page = ref(1)
-const total = await queryContent(locale.value, 'notes').where({ categories: category }).count()
+const total = await queryContent(locale.value as string, 'notes').where({ categories: category }).count()
 const length = computed(() => Math.ceil(total / limit.value))
 const totalVisiable = ref(4)
 
@@ -60,7 +60,8 @@ const notes = ref<ParsedContent[]>([])
 watch(
   () => page.value,
   async (p) => {
-    notes.value = await queryContent(locale.value, 'notes').where({ categories: category })
+    notes.value = await queryContent(locale.value as string, 'notes')
+      .where({ categories: category })
       .sort({ date: -1 })
       .skip((p - 1) * limit.value)
       .limit(limit.value)

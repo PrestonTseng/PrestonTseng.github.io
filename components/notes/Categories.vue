@@ -29,7 +29,7 @@ const { t, locale } = useI18n({
     }
   }
 })
-const notes = await queryContent(locale.value, 'notes').find()
+const notes = await queryContent(locale.value as string, 'notes').find()
 const categories = computed(() =>
   notes
     .map((e) => e.categories)

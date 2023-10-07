@@ -29,5 +29,5 @@ const { t, locale } = useI18n({
     }
   }
 })
-const notes = await queryContent(locale.value, 'notes').sort({ date: -1 }).limit(5).find()
+const notes = await queryContent(locale.value as string, 'notes').sort({ date: -1 }).limit(5).find()
 </script>

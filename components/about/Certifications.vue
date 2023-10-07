@@ -42,8 +42,8 @@ const certifications = computed(() => [
   {
     title: t('languages'),
     items: [
-      { icon: null, name: 'TOFEL iBT 91' },
-      { icon: null, name: 'JLPT N2' }
+      { icon: null, name: 'TOFEL iBT 91', link: '' },
+      { icon: null, name: 'JLPT N2', link: '' }
     ]
   },
   {
