@@ -1,0 +1,1 @@
+.semi-transparent .v-timeline-item__body{opacity:.4;transition:opacity .2s ease-in-out}.semi-transparent .v-timeline-item__body:hover{opacity:1}.semi-transparent:hover .v-timeline-item__body{opacity:1;transition:opacity .2s ease-in-out}

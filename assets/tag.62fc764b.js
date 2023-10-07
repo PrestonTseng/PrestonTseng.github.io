@@ -1,1 +1,0 @@
-import{i as t,Q as n}from"./entry.525be1cd.js";const s=t({class:[String,Array],style:{type:[String,Array,Object],default:null}},"component");function o(e){const r=n("useRender");r.render=e}const p=t({tag:{type:String,default:"div"}},"tag");export{p as a,s as m,o as u};
