@@ -6,7 +6,10 @@
     </v-card-title>
     <v-card-text>
       <div v-for="(exp, index) in experiences" :key="index" class="py-4">
-        <div class="text-subtitle-1 font-weight-bold">{{ exp.position }}</div>
+        <div class="d-flex align-center">
+          <div class="text-subtitle-1 font-weight-bold">{{ exp.position }}</div>
+          <div class="mx-2 text-caption text-secondary">{{ exp.type }}</div>
+        </div>
         <div class="text-subtitle-1">{{ exp.company }} | {{ exp.time }}</div>
         <div v-for="(item, itemIdx) in exp.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
           <template v-if="item.type == 'subtitle'">
@@ -43,6 +46,7 @@ const { t, locale } = useI18n({
 interface Experience {
   company: string
   position: string
+  type: string
   time: string
   items: any
 }
@@ -55,6 +59,7 @@ const experiences = computed<Experience[]>(() => {
           company: '衛武資訊股份有限公司',
           position: '研發工程師',
           time: '2019 - 現職',
+          type: '全職',
           items: [
             { type: 'subtitle', text: '機器學習' },
             { type: 'item', text: '利用 Azure OpenAI 與 Cognitive Search 開發企業知識管理系統' },
@@ -79,10 +84,28 @@ const experiences = computed<Experience[]>(() => {
         {
           company: '花火樹有限公司',
           position: '前端工程師',
+          type: '兼職',
           time: '2018 - 2019',
           items: [
             { type: 'item', text: '負責數個獨立前端網站項目' },
             { type: 'item', text: '開發量化房地產分析服務 「MotherMong3000」' }
+          ]
+        },
+        {
+          company: '智齡科技',
+          position: '前端工程師',
+          type: '兼職',
+          time: '2018 - 2018',
+          items: [{ type: 'item', text: '利用 React/Redux 獨立完成照護系統的血液檢查前端頁面' }]
+        },
+        {
+          company: '國立台灣大學 視覺化實驗室',
+          position: '工讀生',
+          type: '兼職',
+          time: '2016 - 2020',
+          items: [
+            { type: 'item', text: '利用 Node.js + Vue.js 獨立開發實驗室管理系統，降低 70% 的紙本與人力作業' },
+            { type: 'item', text: '利用 AI 與影像辨識技術開發人流管理系統' }
           ]
         }
       ]
@@ -93,6 +116,7 @@ const experiences = computed<Experience[]>(() => {
         {
           company: 'WeBIM Service Co., Ltd.',
           position: 'Research and Development Engineer',
+          type: 'Full-time',
           time: '2019 -',
           items: [
             { type: 'subtitle', text: 'Machine Learning' },
@@ -126,10 +150,28 @@ const experiences = computed<Experience[]>(() => {
         {
           company: 'Hanabiki Ltd',
           position: 'Front-end Developer',
+          type: 'Part-time',
           time: '2018 - 2019',
           items: [
             { type: 'item', text: 'Developed several web projects.' },
             { type: 'item', text: 'Developed a real estate analysis service called ”MotherMong3000”.' }
+          ]
+        },
+        {
+          company: 'Smart Ageing Tech Co., Ltd.',
+          position: 'Front-end Developer',
+          type: 'Part-time',
+          time: '2018 - 2018',
+          items: [{ type: 'item', text: `Developed the front-end interface for a healthcare system's blood testing module independently using React/Redux.` }]
+        },
+        {
+          company: 'National Taiwan University V.Lab',
+          position: 'Undergraduate Researcher',
+          type: 'Part-time',
+          time: '2016 - 2020',
+          items: [
+            { type: 'item', text: 'Independently developed a laboratory management system using Node.js and Vue.js, reducing paper-based and manual operations by 70%.' },
+            { type: 'item', text: 'Developed a people flow management system utilizing AI and image recognition technology.' }
           ]
         }
       ]

@@ -20,7 +20,7 @@
               :ripple="false"
               :href="link.href"
               :target="link.target"
-              class="rounded-pill"
+              class="rounded-pill ml-4"
               style="opacity: 0.7"
             >
               <v-icon left :icon="link.icon" class="px-1 pr-2"></v-icon>
