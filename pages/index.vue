@@ -37,10 +37,10 @@
       </v-col>
       <v-col cols="12" lg="6">
         <v-col cols="12">
-          <about-skills></about-skills>
+          <about-certifications></about-certifications>
         </v-col>
         <v-col cols="12">
-          <about-certifications></about-certifications>
+          <about-skills></about-skills>
         </v-col>
         <v-col cols="12">
           <about-education></about-education>
