@@ -66,7 +66,8 @@ const skills = computed(() => [
     items: [
       { icon: 'mdi-language-csharp', name: 'C#' },
       { icon: 'mdi-dot-net', name: 'ASP.NET Core' },
-      { icon: 'mdi-database-search', name: 'MySQL' }
+      { icon: 'mdi-database-search', name: 'MySQL' },
+      { icon: 'mdi-nodejs', name: 'Node.js' }
     ]
   },
   {
