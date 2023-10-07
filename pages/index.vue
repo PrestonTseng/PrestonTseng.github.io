@@ -123,26 +123,28 @@ const links = computed(() => [
 
 const print = () => {
   var element = document.getElementById('about-containter')
-  html2canvas(element as HTMLElement, { windowWidth: 1280, windowHeight: 1440, scale: 3, useCORS: true, allowTaint: true, ignoreElements: (e) => e.classList.contains('d-print-none') }).then((canvas) => {
-    var pdf = new jsPDF('p', 'mm', 'a4')
-    var img = canvas.toDataURL('image/jpeg', 1.0)
+  html2canvas(element as HTMLElement, { windowWidth: 1280, windowHeight: 1440, scale: 3, useCORS: true, allowTaint: true, ignoreElements: (e) => e.classList.contains('d-print-none') }).then(
+    (canvas) => {
+      var pdf = new jsPDF('p', 'mm', 'a4')
+      var img = canvas.toDataURL('image/jpeg', 1.0)
 
-    var widthOffset = 0
-    var heightOffset = 0
-    var width = pdf.internal.pageSize.getWidth()
-    var height = pdf.internal.pageSize.getHeight()
+      var widthOffset = 0
+      var heightOffset = 0
+      var width = pdf.internal.pageSize.getWidth()
+      var height = pdf.internal.pageSize.getHeight()
 
-    if (canvas.height / canvas.width > height / width) {
-      width = (height * canvas.width) / canvas.height
-      widthOffset = (pdf.internal.pageSize.getWidth() - width) / 2
-    } else {
-      height = (width * canvas.height) / canvas.width
-      heightOffset = (pdf.internal.pageSize.getHeight() - height) / 2
+      if (canvas.height / canvas.width > height / width) {
+        width = (height * canvas.width) / canvas.height
+        widthOffset = (pdf.internal.pageSize.getWidth() - width) / 2
+      } else {
+        height = (width * canvas.height) / canvas.width
+        heightOffset = (pdf.internal.pageSize.getHeight() - height) / 2
+      }
+
+      pdf.addImage(img, 'JPEG', widthOffset, heightOffset, width, height)
+      pdf.save(t('fileName'))
     }
-
-    pdf.addImage(img, 'JPEG', widthOffset, heightOffset, width, height)
-    pdf.save(t('fileName'))
-  })
+  )
 }
 </script>
 

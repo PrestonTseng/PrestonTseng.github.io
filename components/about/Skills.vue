@@ -9,7 +9,7 @@
         <div class="text-subtitle-1 font-weight-bold">{{ skill.title }}</div>
         <div class="text-secondary d-flex flex-wrap align-center">
           <div v-for="(item, index) in skill.items" :key="index" class="d-flex align-center py-3">
-            <v-icon v-if="item.icon && item.icon.startsWith('mdi')" small class="pt-1 pr-2 text-medium-emphasis" :icon="item.icon"></v-icon>
+            <v-icon v-if="item.icon && item.icon.startsWith('mdi')" small class="pr-2 text-medium-emphasis" :icon="item.icon"></v-icon>
             <img v-else-if="item.icon" :src="item.icon" height="21" class="pr-2 pt-1" />
             <span class="text-medium-emphasis">{{ item.name }}</span>
             <span v-if="index < skill.items.length - 1" class="mx-3">|</span>
