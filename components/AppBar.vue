@@ -4,9 +4,9 @@
       <v-app-bar-title>Po Yen <b>Tseng</b></v-app-bar-title>
     </v-btn>
     <template v-slot:append>
-      <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn>
+      <!-- <v-btn v-if="lgAndUp" to="/" color="primary">About</v-btn> -->
       <!-- <v-btn v-if="lgAndUp" to="portfolio" color="primary">Portfolio</v-btn> -->
-      <v-btn v-if="lgAndUp" :to="`/${locale}/notes`" color="primary">Notes</v-btn>
+      <!-- <v-btn v-if="lgAndUp" :to="`/${locale}/notes`" color="primary">Notes</v-btn> -->
       <lang-switch></lang-switch>
     </template>
 
