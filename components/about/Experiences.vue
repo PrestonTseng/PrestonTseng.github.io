@@ -46,14 +46,18 @@ const { t, locale } = useI18n({
   messages: {
     en: {
       experiences: 'experiences',
-      year: '{n} year | {n} year | {n} years',
-      month: '{n} month | {n} month | {n} months',
+      year: 'year',
+      years: 'years',
+      month: 'month',
+      months: 'months',
       present: 'present'
     },
     'zh-tw': {
       experiences: '工作經驗',
-      year: '{n} 年 | {n} 年 | {n} 年',
-      month: '{n} 個月 | {n} 個月 | {n} 個月',
+      year: '年',
+      years: '年',
+      month: '個月',
+      months: '個月',
       present: '現職'
     }
   }
@@ -304,7 +308,7 @@ const duration = (start: moment.Moment, end: moment.Moment | null): string => {
   const years = e.diff(start, 'years')
   const months = e.diff(start, 'months') % 12
 
-  return `${t('year', years)} ${t('month', months)}`
+  return `${years} ${t(years > 1 ? 'years' : 'year')} ${months} ${t(months > 1 ? 'months' : 'month')}`
 }
 
 const timespan = (start: moment.Moment, end: moment.Moment | null): string => {

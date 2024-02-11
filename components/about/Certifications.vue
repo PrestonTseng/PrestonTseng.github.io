@@ -47,7 +47,7 @@ const certifications = computed(() => [
     ]
   },
   {
-    title: t('Microsoft'),
+    title: 'Microsoft',
     items: [{ icon: 'images/microsoft-certified-associate-badge.svg', name: t('ai102'), link: 'https://learn.microsoft.com/api/credentials/share/zh-tw/23651313/544238A3102ED4B9?sharingId=B5C9BD1C8BCCDD7B' }]
   }
 ])
