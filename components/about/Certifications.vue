@@ -7,9 +7,9 @@
     <v-card-text>
       <div v-for="(certification, index) in certifications" :key="index" class="py-4">
         <div class="text-subtitle-1 font-weight-bold">{{ certification.title }}</div>
-        <div v-for="(item, itemIdx) in certification.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
-          <v-icon small class="pt-1 pr-2">mdi-chevron-right</v-icon>
-          <nuxt-link :to="item.link" target="_blank" class="text-secondary">
+        <div v-for="(item, itemIdx) in certification.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary pl-4" style="padding-top: 10px; padding-bottom: 10px">
+          <img :src="item.icon" width="32" />
+          <nuxt-link :to="item.link" target="_blank" class="text-secondary pl-4">
             <span>{{ item.name }}</span>
             <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
           </nuxt-link>
@@ -42,13 +42,13 @@ const certifications = computed(() => [
   {
     title: t('languages'),
     items: [
-      { icon: null, name: 'TOFEL iBT 91', link: '' },
-      { icon: null, name: 'JLPT N2', link: '' }
+      { icon: 'images/united-states.jpeg', name: 'TOFEL iBT 91', link: '' },
+      { icon: 'images/japan.jpeg', name: 'JLPT N2', link: '' }
     ]
   },
   {
     title: t('Microsoft'),
-    items: [{ icon: null, name: t('ai102'), link: 'https://learn.microsoft.com/api/credentials/share/zh-tw/23651313/544238A3102ED4B9?sharingId=B5C9BD1C8BCCDD7B' }]
+    items: [{ icon: 'images/microsoft-certified-associate-badge.svg', name: t('ai102'), link: 'https://learn.microsoft.com/api/credentials/share/zh-tw/23651313/544238A3102ED4B9?sharingId=B5C9BD1C8BCCDD7B' }]
   }
 ])
 </script>

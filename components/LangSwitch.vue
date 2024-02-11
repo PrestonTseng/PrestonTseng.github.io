@@ -1,7 +1,7 @@
 <template>
   <v-menu location="bottom">
     <template v-slot:activator="{ props }">
-      <v-btn v-bind="props" width="92" :ripple="false">{{ currentLocaleName }} </v-btn>
+      <v-btn v-bind="props" variant="outlined" width="92" style="opacity: 0.7" :ripple="false">{{ currentLocaleName }} </v-btn>
     </template>
     <v-list>
       <v-list-item

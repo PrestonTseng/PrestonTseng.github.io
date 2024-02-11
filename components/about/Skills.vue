@@ -30,16 +30,16 @@ const { t } = useI18n({
   messages: {
     en: {
       skills: 'skills',
-      'front-end': 'front-end',
-      'back-end': 'back-end',
+      'frontend': 'Frontend',
+      'backend': 'Backend',
       programming: 'programming',
       'maching-learning': 'Maching Learning',
       devops: 'DevOps'
     },
     'zh-tw': {
       skills: '技能',
-      'front-end': '網頁前端',
-      'back-end': '網頁後端',
+      'frontend': '網頁前端',
+      'backend': '網頁後端',
       programming: '程式語言',
       'maching-learning': '機器學習',
       devops: 'DevOps'
@@ -49,7 +49,7 @@ const { t } = useI18n({
 
 const skills = computed(() => [
   {
-    title: t('front-end'),
+    title: t('frontend'),
     items: [
       { icon: 'mdi-language-javascript', name: 'Javascript' },
       { icon: 'mdi-language-typescript', name: 'Typescript' },
@@ -62,7 +62,7 @@ const skills = computed(() => [
     ]
   },
   {
-    title: t('back-end'),
+    title: t('backend'),
     items: [
       { icon: 'mdi-language-csharp', name: 'C#' },
       { icon: 'mdi-dot-net', name: 'ASP.NET Core' },

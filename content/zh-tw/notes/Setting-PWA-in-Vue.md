@@ -27,7 +27,7 @@ Vue 用的是 google 開發的 workbox 來處理 precache 的部分，但因為p
 
 # manifest 的設定
 
-manifest.json 是一份文件，用來定義 PWA 在下載到桌面的時候，名字與介面形式長怎樣，然而 iOS 是不吃 manifest.json 而是有不一樣的設定，這些網路上有很多資源可以看，在這邊就不贅述了，例如：[PWA學習筆記-4：manifest.json](https://medium.com/front-end-augustus-study-notes/pwa-minifest-6943b5fc65a9)。
+manifest.json 是一份文件，用來定義 PWA 在下載到桌面的時候，名字與介面形式長怎樣，然而 iOS 是不吃 manifest.json 而是有不一樣的設定，這些網路上有很多資源可以看，在這邊就不贅述了，例如：[PWA學習筆記-4：manifest.json](https://medium.com/frontend-augustus-study-notes/pwa-minifest-6943b5fc65a9)。
 
 在 vue.config.js 中，我們可以設定好 manifest 的相關設定，之後 build 起來的同時，Vue 會幫我們依照這裡的設定生成 manifest.json 以及 workbox 相關文件。
 

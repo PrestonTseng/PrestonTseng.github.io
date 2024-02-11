@@ -6,16 +6,22 @@
     </v-card-title>
     <v-card-text>
       <div v-for="(edu, index) in educations" :key="index" class="py-4">
-        <div class="text-subtitle-1 font-weight-bold">{{ edu.degree }}</div>
-        <div class="text-subtitle-1">{{ edu.school }} | {{ edu.time }}</div>
-        <div v-for="(item, itemIdx) in edu.items" :key="itemIdx" class="d-flex align-center justify-start text-secondary" style="padding-top: 10px; padding-bottom: 10px">
+        <div class="d-flex align-center">
+          <img :src="edu.icon" width="48" class="pa-1" />
+          <div class="pl-2">
+            <div class="text-subtitle-1 font-weight-bold">{{ edu.degree }}</div>
+            <div class="text-body-2">{{ edu.school }} | {{ edu.time }}</div>
+          </div>
+        </div>
+        <div v-for="(item, itemIdx) in edu.items" :key="itemIdx" class="d-flex align-top justify-start text-secondary"
+          style="padding-top: 10px; padding-bottom: 10px">
           <v-icon small class="pt-1 pr-2">mdi-chevron-right</v-icon>
           <div>
             <nuxt-link :to="item.link" target="_blank" class="text-secondary">
               <span>{{ item.title }}</span>
-              <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
+              <v-icon v-if="item.link" class="px-2" size="x-small">mdi-open-in-new</v-icon>
             </nuxt-link>
-            <div class="font-italic text-body-2">{{ item.subtitle }}</div>
+            <div class="d-inline font-italic text-body-2">, {{ item.subtitle }}</div>
           </div>
         </div>
       </div>
@@ -41,6 +47,7 @@ const { t, locale } = useI18n({
 interface Education {
   school: string
   degree: string
+  icon: string
   time: string
   items: any
 }
@@ -52,6 +59,7 @@ const educations = computed<Education[]>(() => {
         {
           school: '國立臺灣大學',
           degree: '土木工程系 交通工程組 碩士',
+          icon: 'images/ntu-logo.jpeg',
           time: '2020 - 2022',
           items: [
             { title: 'GPA：3.93/4.30' },
@@ -71,6 +79,7 @@ const educations = computed<Education[]>(() => {
         {
           school: '國立臺灣大學',
           degree: '土木工程系 學士',
+          icon: 'images/ntu-logo.jpeg',
           time: '2016 - 2020',
           items: [{ title: 'GPA：3.92/4.30' }, { title: '完成運輸工程學群。' }]
         }
@@ -82,6 +91,7 @@ const educations = computed<Education[]>(() => {
         {
           school: 'National Taiwan University',
           degree: 'M.S. in Civil Engineering',
+          icon: 'images/ntu-logo.jpeg',
           time: '2020 - 2022',
           items: [
             { title: 'Overall GPA: 3.93/4.30.' },
@@ -101,6 +111,7 @@ const educations = computed<Education[]>(() => {
         {
           school: 'National Taiwan University',
           degree: 'B.S. in Civil Engineering',
+          icon: 'images/ntu-logo.jpeg',
           time: '2016 - 2020',
           items: [{ title: 'Overall GPA: 3.92/4.30.' }, { title: 'Completed railway transportation curriculum.' }]
         }

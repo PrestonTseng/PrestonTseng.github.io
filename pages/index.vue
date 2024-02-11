@@ -26,10 +26,6 @@
               <v-icon left :icon="link.icon" class="px-1 pr-2"></v-icon>
               <span class="text-capitalize">{{ link.text }}</span>
             </v-btn>
-            <v-btn size="small" color="secondary" variant="outlined" :ripple="false" class="rounded-pill ml-4 d-print-none" style="opacity: 0.7" @click="print">
-              <v-icon left icon="mdi-download" class="px-1 pr-2"></v-icon>
-              <span class="text-capitalize">{{ t('download') }}</span>
-            </v-btn>
           </v-card-actionss>
         </v-card>
       </v-col>
@@ -60,8 +56,6 @@ import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
 import headshotLg from '@/public/images/profile_photo.png'
 import headshot from '@/public/images/profile_photo_sm.png'
-import html2canvas from 'html2canvas'
-import { jsPDF } from 'jspdf'
 
 const { smAndUp, mdAndUp, lgAndUp, xlAndUp } = useDisplay()
 
@@ -70,7 +64,7 @@ const { t } = useI18n({
     en: {
       prologue: 'Po Yen Tseng',
       shortIntro: 'Full-Stack Developer',
-      longIntro: `With 4 years of front-end experience, I transitioned to a full-stack role a year ago, specializing in Vue.js, Nuxt.js (front-end), and .NET Core with MySQL (back-end). I focus on developing web services for architecture and civil engineering, such as transferring complex BIM models to the web for improved accessibility and collaboration. I also explore tools like Azure OpenAI and Cognitive Search to enhance document retrieval and analysis. My aim is to innovate and drive digital transformation in this field.`,
+      longIntro: `With 4 years of frontend experience, I transitioned to a full-stack role a year ago, specializing in Vue.js, Nuxt.js (frontend), and .NET Core with MySQL (backend). I focus on developing web services for architecture and civil engineering, such as transferring complex BIM models to the web for improved accessibility and collaboration. I also explore tools like Azure OpenAI and Cognitive Search to enhance document retrieval and analysis. My aim is to innovate and drive digital transformation in this field.`,
       download: 'Download',
       fileName: `Preston's CV`
     },
@@ -120,32 +114,6 @@ const links = computed(() => [
     target: '_blank'
   }
 ])
-
-const print = () => {
-  var element = document.getElementById('about-containter')
-  html2canvas(element as HTMLElement, { windowWidth: 1280, windowHeight: 1440, scale: 3, useCORS: true, allowTaint: true, ignoreElements: (e) => e.classList.contains('d-print-none') }).then(
-    (canvas) => {
-      var pdf = new jsPDF('p', 'mm', 'a4')
-      var img = canvas.toDataURL('image/jpeg', 1.0)
-
-      var widthOffset = 0
-      var heightOffset = 0
-      var width = pdf.internal.pageSize.getWidth()
-      var height = pdf.internal.pageSize.getHeight()
-
-      if (canvas.height / canvas.width > height / width) {
-        width = (height * canvas.width) / canvas.height
-        widthOffset = (pdf.internal.pageSize.getWidth() - width) / 2
-      } else {
-        height = (width * canvas.height) / canvas.width
-        heightOffset = (pdf.internal.pageSize.getHeight() - height) / 2
-      }
-
-      pdf.addImage(img, 'JPEG', widthOffset, heightOffset, width, height)
-      pdf.save(t('fileName'))
-    }
-  )
-}
 </script>
 
 <style lang="scss">
