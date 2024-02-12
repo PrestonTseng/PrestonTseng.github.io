@@ -41,6 +41,10 @@
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import moment from 'moment'
+import ntuLogo from '@/public/images/ntu-logo.jpeg'
+import defaultLogo from '@/public/images/no-company.jpeg'
+import juboLogo from '@/public/images/jubo-logo.jpeg'
+import webimLogo from '@/public/images/webim-logo.jpeg'
 
 const { t, locale } = useI18n({
   messages: {
@@ -91,7 +95,7 @@ const experiences = computed<Experience[]>(() => {
       return [
         {
           company: '衛武資訊股份有限公司',
-          icon: 'images/webim-logo.jpeg',
+          icon: webimLogo,
           type: '全職',
           start: moment('2019/07/01'),
           end: null,
@@ -137,7 +141,7 @@ const experiences = computed<Experience[]>(() => {
         },
         {
           company: '花火樹有限公司',
-          icon: 'images/no-company.jpeg',
+          icon: defaultLogo,
           type: '兼職',
           start: moment('2018/07/01'),
           end: moment('2019/07/01'),
@@ -155,7 +159,7 @@ const experiences = computed<Experience[]>(() => {
         },
         {
           company: '智齡科技',
-          icon: 'images/jubo-logo.jpeg',
+          icon: juboLogo,
           type: '實習',
           start: moment('2018/07/01'),
           end: moment('2018/08/31'),
@@ -195,7 +199,7 @@ const experiences = computed<Experience[]>(() => {
       return [
         {
           company: 'WeBIM Service Co., Ltd.',
-          icon: 'images/webim-logo.jpeg',
+          icon: webimLogo,
           type: 'Full-time',
           start: moment('2019/07/01'),
           end: null,
@@ -248,7 +252,7 @@ const experiences = computed<Experience[]>(() => {
         },
         {
           company: 'Hanabiki Ltd',
-          icon: 'images/no-company.jpeg',
+          icon: defaultLogo,
           type: 'Part-time',
           start: moment('2018/07/01'),
           end: moment('2019/07/01'),
@@ -266,7 +270,7 @@ const experiences = computed<Experience[]>(() => {
         },
         {
           company: 'Smart Ageing Tech Co., Ltd.',
-          icon: 'images/jubo-logo.jpeg',
+          icon: juboLogo,
           type: 'Part-time',
           start: moment('2018/07/01'),
           end: moment('2018/08/31'),
@@ -283,7 +287,7 @@ const experiences = computed<Experience[]>(() => {
         },
         {
           company: 'National Taiwan University V.Lab',
-          icon: 'images/ntu-logo.jpeg',
+          icon: ntuLogo,
           type: 'Part-time',
           start: moment('2017/09/01'),
           end: moment('2020/06/30'),
