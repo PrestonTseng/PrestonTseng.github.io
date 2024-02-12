@@ -117,7 +117,7 @@ const experiences = computed<Experience[]>(() => {
                 { text: '開發 SyncoBox EIP 的差勤與簽核模組' },
                 { text: '開發 SyncoBox Automation 流程自動化微服務' },
                 { text: '客製化開發 Revit 模型提送申請流程自動化服務' },
-                { text: '進行後端基礎建設開發團隊共用套件' },
+                { text: '開發並維護 SyncoBox 全服務共用的後端擴充方法、權限邏輯與微服務間溝通介面' },
                 { text: '利用 Nvidia Omniverse 開發高品質的渲染微服務' },
               ]
             },
@@ -130,7 +130,7 @@ const experiences = computed<Experience[]>(() => {
                 { text: '負責 Autodesk Platform Service Viewer 的整合與相關元件開發' },
                 { text: '負責 SyncoBox EIP 前端頁面' },
                 { text: '開發 SyncoBox Panorama 環景服務，支援 Progressive Web App 與離線存取' },
-                { text: '進行前端基礎建設開發團隊共用套件' },
+                { text: '開發並維護 SyncoBox 全服務共用的前端元件、3D模型預覽元件、環景預覽元件與PWA相關功能' },
                 { text: '以 Web 技術重構 WeBIMSync，做為微服務整合進 SyncoBox', link: 'https://www.syncobox.com/solutions/webimsync' },
                 { text: '開發 SyncoBox 模型標記系統，減少建築設計中 50% 的紙本討論工作' },
                 { text: '基於 BIM 模型開發 SyncoBox 設備管理系統，提高 40% 的設備維護效率' },
@@ -221,7 +221,7 @@ const experiences = computed<Experience[]>(() => {
                 { text: 'Developed attendance and approval modules for SyncoBox EIP.' },
                 { text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
                 { text: 'Customized an automated workflow for Autodesk Revit model submission and approval processes.' },
-                { text: 'Developed several foundational backend development shared across the team.' },
+                { text: 'Developed and maintained the shared extension methods, permission logic, and communication interfaces between microservices for the backend of SyncoBox.' },
                 { text: 'Developed high-quality rendering microservices utilizing Nvidia Omniverse.' }
               ]
             },
@@ -237,7 +237,7 @@ const experiences = computed<Experience[]>(() => {
                 { text: 'Contributed to the integration and development of related components for Autodesk Platform Service Viewer.' },
                 { text: 'Developed SyncoBox EIP.' },
                 { text: 'Developed SyncoBox Panorama Service, supporting Progressive Web App and offline access.' },
-                { text: 'Developed several foundational frontend components shared across the team.' },
+                { text: 'Developed and maintained various frontend components, 3D model preview components, panorama preview components, and PWA-related features for SyncoBox' },
                 {
 
                   text: 'Refactored WeBIMSync into a web service, integrating it as a microservice within SyncoBox.',
