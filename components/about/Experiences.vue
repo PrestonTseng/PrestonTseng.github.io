@@ -205,7 +205,7 @@ const experiences = computed<Experience[]>(() => {
           end: null,
           positions: [
             {
-              name: 'AI Technology Group Leader',
+              name: 'AI Technical Lead',
               start: moment('2024/01/01'),
               end: null,
               items: [
