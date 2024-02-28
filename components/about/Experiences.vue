@@ -111,24 +111,16 @@ const experiences = computed<Experience[]>(() => {
             },
             {
               name: '全端工程師',
-              start: moment('2023/05/01'),
+              start: moment('2019/07/01'),
               end: moment('2024/01/01'),
               items: [
-                { text: '開發 SyncoBox EIP 的差勤與簽核模組' },
+                { text: '開發 SyncoBox EIP 的差勤模組、簽核模組與部分前端頁面' },
                 { text: '開發 SyncoBox Automation 流程自動化微服務' },
                 { text: '客製化開發 Revit 模型提送申請流程自動化服務' },
                 { text: '開發並維護 SyncoBox 全服務共用的後端擴充方法、權限邏輯與微服務間溝通介面' },
                 { text: '利用 Nvidia Omniverse 開發高品質的渲染微服務' },
-              ]
-            },
-            {
-              name: '前端工程師',
-              start: moment('2019/07/01'),
-              end: moment('2023/01/01'),
-              items: [
                 { text: '在 SyncoBox 數位協同設計自動化服務中負責模型瀏覽元件與 SDK 開發', link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/' },
                 { text: '負責 Autodesk Platform Service Viewer 的整合與相關元件開發' },
-                { text: '負責 SyncoBox EIP 前端頁面' },
                 { text: '開發 SyncoBox Panorama 環景服務，支援 Progressive Web App 與離線存取' },
                 { text: '開發並維護 SyncoBox 全服務共用的前端元件、3D模型預覽元件、環景預覽元件與PWA相關功能' },
                 { text: '以 Web 技術重構 WeBIMSync，做為微服務整合進 SyncoBox', link: 'https://www.syncobox.com/solutions/webimsync' },
@@ -136,7 +128,7 @@ const experiences = computed<Experience[]>(() => {
                 { text: '基於 BIM 模型開發 SyncoBox 設備管理系統，提高 40% 的設備維護效率' },
                 { text: '基於電腦視覺與 BIM 模型開發 CCTV 電子柵欄和警報系統，保障工人安全' }
               ]
-            }
+            },
           ]
         },
         {
@@ -215,21 +207,14 @@ const experiences = computed<Experience[]>(() => {
             },
             {
               name: 'Full-Stack Developer',
-              start: moment('2023/05/01'),
+              start: moment('2019/07/01'),
               end: moment('2024/01/01'),
               items: [
-                { text: 'Developed attendance and approval modules for SyncoBox EIP.' },
+                { text: 'Developed attendance and approval modules, and parts of front-end pages for SyncoBox EIP.' },
                 { text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
                 { text: 'Customized an automated workflow for Autodesk Revit model submission and approval processes.' },
                 { text: 'Developed and maintained the shared extension methods, permission logic, and communication interfaces between microservices for the backend of SyncoBox.' },
-                { text: 'Developed high-quality rendering microservices utilizing Nvidia Omniverse.' }
-              ]
-            },
-            {
-              name: 'Frontend Developer',
-              start: moment('2019/07/01'),
-              end: moment('2023/01/01'),
-              items: [
+                { text: 'Developed high-quality rendering microservices utilizing Nvidia Omniverse.' },
                 {
                   text: 'Played a key role in developing model browsing components and SDK for SyncoBox Design Automation Service.',
                   link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/'
