@@ -32,6 +32,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import ntuLogo from '~/public/images/ntu-logo.jpeg'
 
 const { t, locale } = useI18n({
   messages: {
@@ -59,7 +60,7 @@ const educations = computed<Education[]>(() => {
         {
           school: '國立臺灣大學',
           degree: '土木工程系 交通工程組 碩士',
-          icon: 'images/ntu-logo.jpeg',
+          icon: ntuLogo,
           time: '2020 - 2022',
           items: [
             { title: 'GPA：3.93/4.30' },
@@ -79,7 +80,7 @@ const educations = computed<Education[]>(() => {
         {
           school: '國立臺灣大學',
           degree: '土木工程系 學士',
-          icon: 'images/ntu-logo.jpeg',
+          icon: ntuLogo,
           time: '2016 - 2020',
           items: [{ title: 'GPA：3.92/4.30' }, { title: '完成運輸工程學群。' }]
         }
@@ -91,7 +92,7 @@ const educations = computed<Education[]>(() => {
         {
           school: 'National Taiwan University',
           degree: 'M.S. in Civil Engineering',
-          icon: 'images/ntu-logo.jpeg',
+          icon: ntuLogo,
           time: '2020 - 2022',
           items: [
             { title: 'Overall GPA: 3.93/4.30.' },
@@ -111,7 +112,7 @@ const educations = computed<Education[]>(() => {
         {
           school: 'National Taiwan University',
           degree: 'B.S. in Civil Engineering',
-          icon: 'images/ntu-logo.jpeg',
+          icon: ntuLogo,
           time: '2016 - 2020',
           items: [{ title: 'Overall GPA: 3.92/4.30.' }, { title: 'Completed railway transportation curriculum.' }]
         }
