@@ -115,6 +115,7 @@ const experiences = computed<Experience[]>(() => {
               end: moment('2024/01/01'),
               items: [
                 { text: '開發 SyncoBox EIP 的差勤模組、簽核模組與部分前端頁面' },
+                { text: '建立與維護 CI/CD 流程與 Azure 上的部署環境' },
                 { text: '開發 SyncoBox Automation 流程自動化微服務' },
                 { text: '客製化開發 Revit 模型提送申請流程自動化服務' },
                 { text: '開發並維護 SyncoBox 全服務共用的後端擴充方法、權限邏輯與微服務間溝通介面' },
@@ -143,25 +144,8 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2018/07/01'),
               end: moment('2019/07/01'),
               items: [
-                { text: '負責數個獨立前端網站項目' },
+                { text: '負責獨立前端網站接案項目開發' },
                 { text: '開發量化房地產分析服務 「MotherMong3000」' }
-              ]
-            }
-          ]
-        },
-        {
-          company: '智齡科技',
-          icon: juboLogo,
-          type: '實習',
-          start: moment('2018/07/01'),
-          end: moment('2018/08/31'),
-          positions: [
-            {
-              name: '前端工程師',
-              start: moment('2018/07/01'),
-              end: moment('2018/08/31'),
-              items: [
-                { text: '利用 React/Redux 獨立完成照護系統的數個產品前端頁面' }
               ]
             }
           ]
@@ -174,7 +158,7 @@ const experiences = computed<Experience[]>(() => {
           end: moment('2020/06/30'),
           positions: [
             {
-              name: '工讀生',
+              name: '工作人員',
               start: moment('2017/09/01'),
               end: moment('2020/06/30'),
               items: [
@@ -211,6 +195,7 @@ const experiences = computed<Experience[]>(() => {
               end: moment('2024/01/01'),
               items: [
                 { text: 'Developed attendance and approval modules, and parts of front-end pages for SyncoBox EIP.' },
+                { text: 'Established and maintained CI/CD processes and deployments on Azure' },
                 { text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
                 { text: 'Customized an automated workflow for Autodesk Revit model submission and approval processes.' },
                 { text: 'Developed and maintained the shared extension methods, permission logic, and communication interfaces between microservices for the backend of SyncoBox.' },
@@ -247,25 +232,8 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2018/07/01'),
               end: moment('2019/07/01'),
               items: [
-                { text: 'Developed several web projects.' },
+                { text: 'Developed front-end pages for several web projects.' },
                 { text: 'Developed a real estate analysis service called ”MotherMong3000”.' }
-              ]
-            }
-          ]
-        },
-        {
-          company: 'Smart Ageing Tech Co., Ltd.',
-          icon: juboLogo,
-          type: 'Part-time',
-          start: moment('2018/07/01'),
-          end: moment('2018/08/31'),
-          positions: [
-            {
-              name: 'Frontend Developer',
-              start: moment('2018/07/01'),
-              end: moment('2018/08/31'),
-              items: [
-                { text: `Developed the frontend interface for a healthcare system's blood testing module independently using React/Redux.` }
               ]
             }
           ]
