@@ -115,7 +115,7 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2019-07-01'),
               end: moment('2024-01-01'),
               items: [
-                { text: '開發 SyncoBox EIP 的差勤模組、簽核模組與部分前端頁面' },
+                { text: '開發 SyncoBox EIP 的差勤模組、簽核模組' },
                 { text: '建立與維護 CI/CD 流程與 Azure 上的部署環境' },
                 { text: '開發 SyncoBox Automation 流程自動化微服務' },
                 { text: '客製化開發 Revit 模型提送申請流程自動化服務' },
@@ -196,7 +196,7 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2019-07-01'),
               end: moment('2024-01-01'),
               items: [
-                { text: 'Developed attendance and approval modules, and parts of front-end pages for SyncoBox EIP.' },
+                { text: 'Developed attendance and approval modules for SyncoBox EIP.' },
                 { text: 'Established and maintained CI/CD processes and deployments on Azure' },
                 { text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
                 { text: 'Customized an automated workflow for Autodesk Revit model submission and approval processes.' },
