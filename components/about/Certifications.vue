@@ -9,7 +9,7 @@
         <div class="text-subtitle-1 font-weight-bold">{{ certification.title }}</div>
         <div v-for="(item, itemIdx) in certification.items" :key="itemIdx"
           class="d-flex align-center justify-start text-secondary pl-4" style="padding-top: 10px; padding-bottom: 10px">
-          <img :src="item.icon" width="32" />
+          <img :src="item.icon" width="32" height="32" style="width: 32px;height: 32px;" />
           <nuxt-link :to="item.link" target="_blank" class="text-secondary pl-4">
             <span>{{ item.name }}</span>
             <v-icon v-if="item.link" class="pl-2" size="x-small">mdi-open-in-new</v-icon>
@@ -25,7 +25,7 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import englishIcon from '@/public/images/united-states.jpeg'
 import japaneseIcon from '@/public/images/japan.jpeg'
-import msCertIcon from '@/public/images/microsoft-certified-associate-badge.svg'
+import msCertIcon from '@/public/images/microsoft-certified-associate-badge.png'
 
 const { t } = useI18n({
   messages: {

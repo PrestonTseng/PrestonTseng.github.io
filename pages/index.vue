@@ -10,7 +10,7 @@
           <div class="text-h6 font-weight-light px-4 py-2" :class="{ 'text-center': !lgAndUp }">{{ t('shortIntro') }}</div>
           <div class="text-h3 font-weight-medium text-primary px-2 pb-2" :class="{ 'text-center': !lgAndUp }">{{ t('prologue') }}</div>
           <v-card-text class="text-secondary text-medium-emphasis" style="white-space: pre-line; line-height: 1.5rem; font-size: 0.95rem">{{ t('longIntro') }}</v-card-text>
-          <v-card-actionss>
+          <v-card-actions :class="{'d-flex justify-center': !lgAndUp}">
             <v-btn
               v-for="(link, index) in links"
               :key="index"
@@ -24,9 +24,9 @@
               style="opacity: 0.7"
             >
               <v-icon left :icon="link.icon" class="px-1 pr-2"></v-icon>
-              <span class="text-capitalize">{{ link.text }}</span>
+              <span class="text-lowercase">{{ link.text }}</span>
             </v-btn>
-          </v-card-actionss>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" style="height: 50px"></v-col>
@@ -64,14 +64,14 @@ const { t } = useI18n({
     en: {
       prologue: 'Po Yen Tseng',
       shortIntro: 'Full-Stack Developer',
-      longIntro: `With 4 years of frontend experience, I transitioned to a full-stack role a year ago, specializing in Vue.js, Nuxt.js (frontend), and .NET Core with MySQL (backend). I focus on developing web services for architecture and civil engineering, such as transferring complex BIM models to the web for improved accessibility and collaboration. I also explore tools like Azure OpenAI and Cognitive Search to enhance document retrieval and analysis. I am highly interested in researching new technologies and exploring innovative solutions, aiming to create projects that address challenges faced by many.`,
+      longIntro: `Since high school, I have been self-taught in programming, and my passion for technology led me to frequently enroll in computer science courses during my university and graduate studies. I actively engaged in internships and freelance projects from my university days to hone my practical skills. Initially starting as a front-end developer, my thirst for knowledge prompted me to volunteer for back-end development projects, eventually evolving into a full-stack developer. I am passionate about researching new technologies, with a recent focus on AI-related technologies. Utilizing what I've learned, I successfully guided my team to venture into new business domains for the company by developing AI applications.`,
       download: 'Download',
       fileName: `Preston's CV`
     },
     'zh-tw': {
       prologue: '曾柏硯',
       shortIntro: '全端工程師',
-      longIntro: `從高中開始，我便持續自學網頁開發，至今已有４年前端工作經驗．１年前因現職工作需求，開始涉獵後端，作為全端工程師，同時負責前後端的開發。前端方面主要使用 Vue.js 和 Nuxt.js 進行開發。而後端方面則採用 .NET Core 搭配 MySQL。 在目前的職務上致力於研發各種網路服務，為建築和土木工程領域提供數位轉型的解決方案。例如將原本需要高度圖像處理設備的 BIM 模型轉移到網頁上，打破了設備的限制，讓各種不同的設備和環境都能立即查看和協作。此外，我也持續學習並嘗試新工具，例如運用 Azure OpenAI 和 Cognitive Search 技術，讓過去的建築和土木工程文件以及工程圖紙能夠輕鬆地被檢索和分析。我對研究新技術與探索創新的解決方案非常有興趣，並期許自己打造出的作品可以解決許多人的煩惱。`,
+      longIntro: `自高中開始自學程式設計，對技術的熱情使我在大學及研究所期間，經常跨系修讀資訊工程相關課程。我從大學時期就積極參與實習與接案工作來磨練自己的實務能力，初期為前端工程師，但出於對技術的渴望，我主動要求參與後端開發項目，最終成為一名全端工程師。我對於研究新技術充滿熱情，近期特別專注於研究 AI 相關的技術，並且利用所學，成功帶領團隊開拓了公司 AI 應用開發的相關業務。`,
       download: '下載',
       fileName: `曾柏硯的履歷`
     }
@@ -97,19 +97,19 @@ useSeoMeta({
 const links = computed(() => [
   {
     icon: 'mdi-github',
-    text: 'GitHub',
+    text: '@prestontseng',
     href: 'https://github.com/prestontseng',
     target: '_blank'
   },
   {
     icon: 'mdi-linkedin',
-    text: 'LinkedIn',
+    text: '@prestontseng',
     href: 'https://www.linkedin.com/in/prestontseng',
     target: '_blank'
   },
   {
     icon: 'mdi-email',
-    text: 'E-mail',
+    text: 'csps50404@gmail.com',
     href: 'mailto:csps50404@gmail.com',
     target: '_blank'
   }

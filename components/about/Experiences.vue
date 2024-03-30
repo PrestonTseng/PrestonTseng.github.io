@@ -97,22 +97,23 @@ const experiences = computed<Experience[]>(() => {
           company: '衛武資訊股份有限公司',
           icon: webimLogo,
           type: '全職',
-          start: moment('2019/07/01'),
+          start: moment('2019-07-01'),
           end: null,
           positions: [
             {
               name: 'AI 技術組長',
-              start: moment('2024/01/01'),
+              start: moment('2024-01-01'),
               end: null,
               items: [
                 { text: '利用 Azure OpenAI 與 Cognitive Search 開發企業知識管理系統' },
                 { text: '利用 Azure OpenAI GPT 開發智能客服系統' },
+                { text: '規劃與建立 SyncoBox 微前端架構' },
               ]
             },
             {
               name: '全端工程師',
-              start: moment('2019/07/01'),
-              end: moment('2024/01/01'),
+              start: moment('2019-07-01'),
+              end: moment('2024-01-01'),
               items: [
                 { text: '開發 SyncoBox EIP 的差勤模組、簽核模組與部分前端頁面' },
                 { text: '建立與維護 CI/CD 流程與 Azure 上的部署環境' },
@@ -136,13 +137,13 @@ const experiences = computed<Experience[]>(() => {
           company: '花火樹有限公司',
           icon: defaultLogo,
           type: '兼職',
-          start: moment('2018/07/01'),
-          end: moment('2019/07/01'),
+          start: moment('2018-07-01'),
+          end: moment('2019-07-01'),
           positions: [
             {
               name: '前端工程師',
-              start: moment('2018/07/01'),
-              end: moment('2019/07/01'),
+              start: moment('2018-07-01'),
+              end: moment('2019-07-01'),
               items: [
                 { text: '負責獨立前端網站接案項目開發' },
                 { text: '開發量化房地產分析服務 「MotherMong3000」' }
@@ -154,13 +155,13 @@ const experiences = computed<Experience[]>(() => {
           company: '國立台灣大學 視覺化實驗室',
           icon: 'images/ntu-logo.jpeg',
           type: '兼職',
-          start: moment('2017/09/01'),
-          end: moment('2020/06/30'),
+          start: moment('2017-09-01'),
+          end: moment('2020-06-30'),
           positions: [
             {
               name: '工作人員',
-              start: moment('2017/09/01'),
-              end: moment('2020/06/30'),
+              start: moment('2017-09-01'),
+              end: moment('2020-06-30'),
               items: [
                 { text: '利用 Node.js + Vue.js 獨立開發實驗室管理系統，降低 70% 的紙本與人力作業' },
                 { text: '利用 AI 與影像辨識技術開發人流管理系統' }
@@ -177,22 +178,23 @@ const experiences = computed<Experience[]>(() => {
           company: 'WeBIM Service Co., Ltd.',
           icon: webimLogo,
           type: 'Full-time',
-          start: moment('2019/07/01'),
+          start: moment('2019-07-01'),
           end: null,
           positions: [
             {
               name: 'AI Technical Lead',
-              start: moment('2024/01/01'),
+              start: moment('2024-01-01'),
               end: null,
               items: [
                 { text: 'Utilized Azure OpenAI and Cognitive Search to develop an enterprise knowledge management service.' },
                 { text: 'Utilized Azure OpenAI GPT to develop AI customer service.' },
+                { text: 'Designed and built the SyncoBox micro front-end architecture.'}
               ]
             },
             {
               name: 'Full-Stack Developer',
-              start: moment('2019/07/01'),
-              end: moment('2024/01/01'),
+              start: moment('2019-07-01'),
+              end: moment('2024-01-01'),
               items: [
                 { text: 'Developed attendance and approval modules, and parts of front-end pages for SyncoBox EIP.' },
                 { text: 'Established and maintained CI/CD processes and deployments on Azure' },
@@ -224,13 +226,13 @@ const experiences = computed<Experience[]>(() => {
           company: 'Hanabiki Ltd',
           icon: defaultLogo,
           type: 'Part-time',
-          start: moment('2018/07/01'),
-          end: moment('2019/07/01'),
+          start: moment('2018-07-01'),
+          end: moment('2019-07-01'),
           positions: [
             {
               name: 'Frontend Developer',
-              start: moment('2018/07/01'),
-              end: moment('2019/07/01'),
+              start: moment('2018-07-01'),
+              end: moment('2019-07-01'),
               items: [
                 { text: 'Developed front-end pages for several web projects.' },
                 { text: 'Developed a real estate analysis service called ”MotherMong3000”.' }
@@ -242,13 +244,13 @@ const experiences = computed<Experience[]>(() => {
           company: 'National Taiwan University V.Lab',
           icon: ntuLogo,
           type: 'Part-time',
-          start: moment('2017/09/01'),
-          end: moment('2020/06/30'),
+          start: moment('2017-09-01'),
+          end: moment('2020-06-30'),
           positions: [
             {
               name: 'Undergraduate Researcher',
-              start: moment('2017/09/01'),
-              end: moment('2020/06/30'),
+              start: moment('2017-09-01'),
+              end: moment('2020-06-30'),
               items: [
                 { text: 'Independently developed a laboratory management system using Node.js and Vue.js, reducing paper-based and manual operations by 70%.' },
                 { text: 'Developed a people flow management system utilizing AI and image recognition technology.' }

@@ -21,7 +21,7 @@
               <span>{{ item.title }}</span>
               <v-icon v-if="item.link" class="px-2" size="x-small">mdi-open-in-new</v-icon>
             </nuxt-link>
-            <div class="d-inline font-italic text-body-2">, {{ item.subtitle }}</div>
+            <div class="d-inline font-italic text-body-2"> {{ item.subtitle }}</div>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ntuLogo from '~/public/images/ntu-logo.jpeg'
+import ntuLogo from '@/public/images/ntu-logo.jpeg'
 
 const { t, locale } = useI18n({
   messages: {
@@ -66,15 +66,15 @@ const educations = computed<Education[]>(() => {
             { title: 'GPA：3.93/4.30' },
             {
               title: 'Real‐Time Indoor Localization with Visual SLAM for Emergency Responders',
-              subtitle: 'Automation in Construction, 2022',
+              subtitle: ', Automation in Construction, 2022',
               link: 'https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923'
             },
             {
               title: '應用 Visual SLAM 於建築內緊急救護之即時室內定位',
-              subtitle: '碩士論文, 2022',
+              subtitle: ', 碩士論文, 2022',
               link: 'https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22110NTU05015122%22.&searchmode=basic'
             },
-            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: 'SCEM International Conference, 2022', link: null }
+            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: ', SCEM International Conference, 2022', link: null }
           ]
         },
         {
@@ -98,15 +98,15 @@ const educations = computed<Education[]>(() => {
             { title: 'Overall GPA: 3.93/4.30.' },
             {
               title: 'Real‐Time Indoor Localization with Visual SLAM for Emergency Responders',
-              subtitle: 'Automation in Construction, 2022',
+              subtitle: ', Automation in Construction, 2022',
               link: 'https://www.sciencedirect.com/science/article/abs/pii/S0926580522001923'
             },
             {
               title: 'Real‐Time Indoor Localization with Visual SLAM for In‐building Emergency Response',
-              subtitle: 'Master Thesis, 2022',
+              subtitle: ', Master Thesis, 2022',
               link: 'https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id=%22110NTU05015122%22.&searchmode=basic'
             },
-            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: 'SCEM International Conference, 2022', link: null }
+            { title: 'Emergency Indoor Positioning System with Visual SLAM to Improve the Efficiency of EMS', subtitle: ', SCEM International Conference, 2022', link: null }
           ]
         },
         {
