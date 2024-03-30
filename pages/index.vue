@@ -64,7 +64,7 @@ const { t } = useI18n({
     en: {
       prologue: 'Po Yen Tseng',
       shortIntro: 'Full-Stack Developer',
-      longIntro: `Since high school, I have been self-taught in programming, and my passion for technology led me to frequently enroll in computer science courses during my university and graduate studies. I actively engaged in internships and freelance projects from my university days to hone my practical skills. Initially starting as a front-end developer, my thirst for knowledge prompted me to volunteer for back-end development projects, eventually evolving into a full-stack developer. I am passionate about researching new technologies, with a recent focus on AI-related technologies. Utilizing what I've learned, I successfully guided my team to venture into new business domains for the company by developing AI applications.`,
+      longIntro: `Since high school, I have embarked on a journey of self-education in programming. My enthusiasm for technology motivated me to enroll in computer science courses throughout my university and postgraduate studies. Eager to refine my practical skills, I actively participated in internships and side-projects from my university years. Initially, I began my career as a front-end developer. However, my eagerness to expand my skill set led me to volunteer for back-end development tasks, ultimately transitioning into a full-stack developer role. I possess a strong passion for exploring new technologies, with a recent emphasis on AI-related advancements. Leveraging my knowledge, I played a pivotal role in steering my team towards the exploration of new business avenues in AI application development.`,
       download: 'Download',
       fileName: `Preston's CV`
     },
