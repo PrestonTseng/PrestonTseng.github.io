@@ -23,8 +23,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import pytorchSvg from '@/public/icons/pytorch.svg'
-import openAiSvg from '@/public/icons/openai.svg'
 
 const { t } = useI18n({
   messages: {
@@ -33,7 +31,7 @@ const { t } = useI18n({
       'frontend': 'Frontend',
       'backend': 'Backend',
       programming: 'programming',
-      'maching-learning': 'Maching Learning',
+      'maching-learning': 'AI',
       devops: 'DevOps'
     },
     'zh-tw': {
@@ -41,7 +39,7 @@ const { t } = useI18n({
       'frontend': '網頁前端',
       'backend': '網頁後端',
       programming: '程式語言',
-      'maching-learning': '機器學習',
+      'maching-learning': 'AI',
       devops: 'DevOps'
     }
   }
@@ -74,8 +72,9 @@ const skills = computed(() => [
     title: t('maching-learning'),
     items: [
       { icon: 'mdi-language-python', name: 'Python' },
-      { icon: pytorchSvg, name: 'Pytorch' },
-      { icon: openAiSvg, name: 'Azure OpenAI' }
+      { icon: '/icons/pytorch.svg', name: 'Pytorch' },
+      { icon: '/icons/openai.svg', name: 'OpenAI' },
+      { icon: 'mdi-microsoft-azure', name: 'Azure AI Service' }
     ]
   },
   {
