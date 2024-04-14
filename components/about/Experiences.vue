@@ -105,9 +105,9 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2024-01-01'),
               end: null,
               items: [
-                { text: '利用 Azure OpenAI 與 Cognitive Search 開發企業知識管理系統' },
-                { text: '利用 Azure OpenAI GPT 開發智能客服系統' },
-                { text: '規劃與建立 SyncoBox 微前端架構' },
+                { text: '利用 Azure AI Service 開發企業知識管理系統，協助企業將紙本文件數位化，提升文件查閱的效率' },
+                { text: '利用 OpenAI GPT 開發智能客服系統自動回覆客戶問題，降低客服人員 86% 的工作量' },
+                { text: '負責研究並建立微前端架構，使 Vue2 與 Vue3 的服務在轉移時能夠並存' }
               ]
             },
             {
@@ -115,19 +115,17 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2019-07-01'),
               end: moment('2024-01-01'),
               items: [
-                { text: '開發 SyncoBox EIP 的差勤模組、簽核模組' },
+                { text: '負責規劃與開發 SyncoBox EIP 的差勤、簽核模組' },
                 { text: '建立與維護 CI/CD 流程與 Azure 上的部署環境' },
-                { text: '開發 SyncoBox Automation 流程自動化微服務' },
-                { text: '客製化開發 Revit 模型提送申請流程自動化服務' },
-                { text: '開發並維護 SyncoBox 全服務共用的後端擴充方法、權限邏輯與微服務間溝通介面' },
-                { text: '利用 Nvidia Omniverse 開發高品質的渲染微服務' },
-                { text: '在 SyncoBox 數位協同設計自動化服務中負責模型瀏覽元件與 SDK 開發', link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/' },
-                { text: '負責 Autodesk Platform Service Viewer 的整合與相關元件開發' },
-                { text: '開發 SyncoBox Panorama 環景服務，支援 Progressive Web App 與離線存取' },
-                { text: '開發並維護 SyncoBox 全服務共用的前端元件、3D模型預覽元件、環景預覽元件與PWA相關功能' },
-                { text: '以 Web 技術重構 WeBIMSync，做為微服務整合進 SyncoBox', link: 'https://www.syncobox.com/solutions/webimsync' },
-                { text: '開發 SyncoBox 模型標記系統，減少建築設計中 50% 的紙本討論工作' },
-                { text: '基於 BIM 模型開發 SyncoBox 設備管理系統，提高 40% 的設備維護效率' },
+                { text: '負責規劃與開發 SyncoBox Automation ，將 BIM 模型的檢查流程 100% 自動化' },
+                { text: '開發並維護後端團隊的共用套件、權限邏輯與微服務溝通介面，提高維護性與降低協作成本' },
+                { text: '負責研究並利用 Nvidia Omniverse 開發高品質的渲染服務' },
+                { text: '負責開發 SyncoBox 數位協同設計自動化服務中的 3D 模型管理介面', link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/' },
+                { text: '負責規劃與利用 Autodesk Platform Service Viewer 開發 3D 模型渲染元件' },
+                { text: '負責規劃與開發 SyncoBox Panorama ，提供支援離線存取的線上環景服務' },
+                { text: '以 Web 技術重構 WeBIMSync 並整合進 SyncoBox 服務中', link: 'https://www.syncobox.com/solutions/webimsync' },
+                { text: '負責規劃與開發 SyncoBox Markups，減少建築設計中 50% 的紙本討論工作' },
+                { text: '負責開發 SyncoBox 建築設備管理系統，提高 40% 的廠房維護效率' },
                 { text: '基於電腦視覺與 BIM 模型開發 CCTV 電子柵欄和警報系統，保障工人安全' }
               ]
             },
@@ -186,9 +184,9 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2024-01-01'),
               end: null,
               items: [
-                { text: 'Utilized Azure OpenAI and Cognitive Search to develop an enterprise knowledge management service.' },
-                { text: 'Utilized Azure OpenAI GPT to develop AI customer service.' },
-                { text: 'Designed and built the SyncoBox micro front-end architecture.'}
+                { text: 'Developed enterprise knowledge management system using Azure AI Service to digitize paper documents and improve document retrieval efficiency' },
+                { text: 'Developed intelligent customer service system using OpenAI GPT to automatically respond to customer inquiries, reducing 86% of customer service workload' },
+                { text: 'Researched and established micro-front-end architecture to allow Vue2 and Vue3 services to coexist during migration' }
               ]
             },
             {
@@ -196,28 +194,18 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2019-07-01'),
               end: moment('2024-01-01'),
               items: [
-                { text: 'Developed attendance and approval modules for SyncoBox EIP.' },
+                { text: 'Responsible for designing and developing the attendance and approval modules of SyncoBox EIP' },
                 { text: 'Established and maintained CI/CD processes and deployments on Azure' },
-                { text: 'Developed SyncoBox Automation Service for Robotic Process Automation.' },
-                { text: 'Customized an automated workflow for Autodesk Revit model submission and approval processes.' },
-                { text: 'Developed and maintained the shared extension methods, permission logic, and communication interfaces between microservices for the backend of SyncoBox.' },
-                { text: 'Developed high-quality rendering microservices utilizing Nvidia Omniverse.' },
-                {
-                  text: 'Played a key role in developing model browsing components and SDK for SyncoBox Design Automation Service.',
-                  link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/'
-                },
-                { text: 'Contributed to the integration and development of related components for Autodesk Platform Service Viewer.' },
-                { text: 'Developed SyncoBox EIP.' },
-                { text: 'Developed SyncoBox Panorama Service, supporting Progressive Web App and offline access.' },
-                { text: 'Developed and maintained various frontend components, 3D model preview components, panorama preview components, and PWA-related features for SyncoBox' },
-                {
-
-                  text: 'Refactored WeBIMSync into a web service, integrating it as a microservice within SyncoBox.',
-                  link: 'https://www.syncobox.com/solutions/webimsync'
-                },
-                { text: 'Developed SyncoBox Markup Service, reducing paper-based discussions by 50% during architectural design.' },
-                { text: 'Developed SyncoBox Facility Management Service based on BIM models, increasing maintenance efficiency by 40%.' },
-                { text: 'Utilized computer vision and BIM models to develop CCTV electronic fences and alarm systems, enhancing worker safety.' }
+                { text: 'Designed and developed SyncoBox Automation to automate 100% of the inspection process of BIM models' },
+                { text: 'Developed and maintained shared packages, permission logic, and microservice communication interfaces for the backend team to improve maintainability and reduce collaboration costs' },
+                { text: 'Researched and utilized Nvidia Omniverse to develop high-quality rendering services' },
+                { text: 'Developed the 3D model management module for SyncoBox digital design automation service', link: 'https://webim.com.tw/tech-ch/syncobox-autodesk-platform-services-2/' },
+                { text: 'Designed and utilized Autodesk Platform Service Viewer to develop 3D model rendering components' },
+                { text: 'Designed and developed SyncoBox Panorama to provide online panoramic services with offline access support' },
+                { text: 'Refactored WeBIMSync with web technologies and integrated it into SyncoBox services', link: 'https://www.syncobox.com/solutions/webimsync' },
+                { text: 'Designed and developed SyncoBox Markups to reduce 50% of paper-based discussions in architectural design' },
+                { text: 'Developed SyncoBox facility management service to improve factory maintenance efficiency by 40%' },
+                { text: 'Developed CCTV electronic fence and alarm system based on computer vision and BIM models to ensure worker safety' }
               ]
             }
           ]
