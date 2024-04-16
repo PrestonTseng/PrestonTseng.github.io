@@ -56,7 +56,9 @@ const skills = computed(() => [
       { icon: 'mdi-vuetify', name: 'Vuetify.js' },
       { icon: 'mdi-language-html5', name: 'HTML5' },
       { icon: 'mdi-language-css3', name: 'CSS' },
-      { icon: 'mdi-sass', name: 'SASS' }
+      { icon: 'mdi-sass', name: 'SASS' },
+      { icon: 'mdi-react', name: 'React.js' },
+      { icon: 'mdi-react', name: 'Next.js' }
     ]
   },
   {
