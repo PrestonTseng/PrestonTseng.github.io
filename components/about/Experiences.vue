@@ -161,7 +161,7 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2017-09-01'),
               end: moment('2020-06-30'),
               items: [
-                { text: '利用 Node.js + Vue.js 獨立開發實驗室管理系統，降低 70% 的紙本與人力作業' },
+                { text: '獨立開發實驗室管理系統，降低 70% 的紙本與人力作業' },
                 { text: '利用 AI 與影像辨識技術開發人流管理系統' }
               ]
             }
@@ -240,7 +240,7 @@ const experiences = computed<Experience[]>(() => {
               start: moment('2017-09-01'),
               end: moment('2020-06-30'),
               items: [
-                { text: 'Independently developed a laboratory management system using Node.js and Vue.js, reducing paper-based and manual operations by 70%.' },
+                { text: 'Independently developed a laboratory management system, reducing paper-based and manual operations by 70%.' },
                 { text: 'Developed a people flow management system utilizing AI and image recognition technology.' }
               ]
             }
