@@ -109,8 +109,8 @@ const links = computed(() => [
   },
   {
     icon: 'mdi-email',
-    text: 'csps50404@gmail.com',
-    href: 'mailto:csps50404@gmail.com',
+    text: 'prestontseng.work@gmail.com',
+    href: 'mailto:prestontseng.work@gmail.com',
     target: '_blank'
   }
 ])
